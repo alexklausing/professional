@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: 100%;
+}
+
+
+
+/*
+FONT FAMILIES
+font-family: 'Poppins', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+*/
+
+h1{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    letter-spacing: .1em;
+    font-size: 10em;
+    line-height: .9em;
+}
+
+h2{
+    font-family: 'poppins', sans-serif;
+    font-weight: 400;
+    letter-spacing: .1em;
+    font-size: 6em;
+    line-height: .9em;
+}

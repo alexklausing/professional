@@ -1,0 +1,38 @@
+body, html {
+    height: 100%;
+}
+
+/* The hero image */
+.hero-image {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: calc(80vh - 54px);
+    background-color: gray;
+    background-image: 
+        linear-gradient(
+            rgba(0, 0, 0, 0), 
+            rgba(0, 0, 0, 0)),
+        url("https://scontent-yyz1-1.xx.fbcdn.net/v/t1.0-9/387579_823185892229_358509996_n.jpg?_nc_cat=108&ccb=2&_nc_sid=e3f864&_nc_ohc=41W2HUqgPpQAX9zmepH&_nc_ht=scontent-yyz1-1.xx&oh=e912dece7b2a3bb816ba6d744a4b796c&oe=600063EE");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+  text-align: center;
+  position: absolute;
+width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+h1{
+    color: white;   
+}
