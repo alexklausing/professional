@@ -1,290 +1,308 @@
-a:hover {
-  text-decoration: underline;
+.cover{
+    width: 100%;
+    height: 60%;
+    background-image:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),url('https://images.unsplash.com/photo-1532339142463-fd0a8979791a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');  
+    background-repeat: no-repeat;
+    background-position:center;
+    position: relative;
+    background-size: cover;
 }
 
-/* Hero Unit ----------------------*/
-.hero-unit {
-  height: 640px;
-  background: url(https://static.pexels.com/photos/2884/building-vintage-bike-monument.jpg) no-repeat center center;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-}
-.hero-unit h1,
-.hero-unit h2,
-.hero-unit h3,
-.hero-unit h4,
-.hero-unit h5,
-.hero-unit h6 {
-  margin-top: -0.5rem;
-  margin-bottom: 0;
-  color: white;
-}
-.hero-unit h1 {
-  font-weight: bold;
-}
-.hero-unit hgroup {
-  margin: 3rem 0;
-}
-.hero-unit .card-icon { /* front of card */
-  display: block;
-  margin: 0.5rem auto 0;
-  font-size: 2rem;
-  color: white;
-}
-.hero-unit .clients {
-  margin: 2rem auto;
-}
-.hero-unit .clients a {
-  color: white;
-}
-.clients .fa-stack-2x {
-  color: gray;
-}
-.clients:hover .fa-stack-2x {
-  color: #333333;
-}
 
-/* Card design - front */
-.button.large {
-  margin: 0;
-  padding: 3.25rem;
-}
-.button.large a {
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: white;
-  font-size: 1.75rem;
-  font-weight: 100;
-  margin-top: 2rem;
-}
-
-/* Card design - back */
-.panel i {
-  font-size: 2rem;
-  display: block;
-  float: left;
-  width: 20%;
-  opacity: 0.5;
-}
-.panel a, 
-.panel p, 
-.panel small {
-  width: 80%;
-  float: right;
-}
-.panel a {
-  margin-bottom: 0.5rem;
-}
-.panel a:hover {
-  text-decoration: underline;
-}
-.panel small {
-  margin-top: -0.5rem;
-  font-style: italic;
-}
-
-/* Buttons Card Flipper 
- * Source: https://cssdeck.com/labs/rxcleo5w
- */
-.flip-cards {
-  float: left;
   width: 100%;
-  height: 100%;
-  padding-left: 1rem;
 }
 
-.flip-cards li {
-  float: left;
-  width: 33.3%;
-  height: 180px;
-  position: relative;
-  padding: 0;
+.headline1{
+    font-family: 'Roboto',sans-serif;
+    font-size: 5em;   
 }
 
-.flip-cards li:hover {
+.tagline1{
+    font-family: 'Roboto',sans-serif;
+    font-size: 2.25em;   
+}
+
+
+.endorsement-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 3em 0em;
+    width: 100%;
+    height: auto;
+}
+
+.endorsement-box{
+    width: 18em;
+    height: 18em;
+    background-color: #999;
+    position: relative;
+    border: .3em solid #555;
+    border-radius: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.endorsement-photo {
+    height: 10em;
+    width: 10em;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.endorsement-photo img {
+    height: 10em;
+    width: 10em;
+    object-fit: cover;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    border-radius: 50%;
+    border: .25em solid gray;
+    text-align: center
+}
+
+
+
+.skills-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 4em 10%;
+}
+
+.skills-box{
+    height: 10em;
+    width: 10em;
+    border: .2em solid #777;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    word-wrap: normal;
+    word-break:keep-all;
+    box-shadow: .2em .2em #999;
+    margin: 1em;
+    }
+
+/*Modal Start*/
+
+/* [Object] Modal
+ * =============================== */
+.modal {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: left;
+  background: rgba(0,0,0, .9);
+  transition: opacity .25s ease;
+}
+
+.modal__bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   cursor: pointer;
 }
 
-.flip-cards li:hover .card-front {
-  -webkit-transform: rotateY(180deg);
-  -moz-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
-  -o-transform: rotateY(180deg);
-  transform: rotateY(180deg);
-  -webkit-transform: perspective(1000) rotateY(180deg);
-  -moz-transform: perspective(1000) rotateY(180deg);
-  -ms-transform: perspective(1000) rotateY(180deg);
-  -o-transform: perspective(1000) rotateY(180deg);
-  transform: perspective(1000) rotateY(180deg);
+.modal-state {
+  display: none;
 }
 
-.flip-cards li:hover .card-back {
-  z-index: 950;
-  -webkit-transform: rotateY(0deg);
-  -moz-transform: rotateY(0deg);
-  -ms-transform: rotateY(0deg);
-  -o-transform: rotateY(0deg);
-  transform: rotateY(0deg);
-  -webkit-transform: perspective(1000) rotateY(0deg);
-  -moz-transform: perspective(1000) rotateY(0deg);
-  -ms-transform: perspective(1000) rotateY(0deg);
-  -o-transform: perspective(1000) rotateY(0deg);
-  transform: perspective(1000) rotateY(0deg);
+.modal-state:checked + .modal {
+  opacity: 1;
+  visibility: visible;
 }
 
-.flip-cards .card-front,
-.flip-cards .card-back {
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-transition: -webkit-transform 0.6s;
-  -moz-transition: -moz-transform 0.6s;
-  -o-transition: -o-transform 0.6s;
-  transition: transform 0.6s;
-  display: block;
-  height: 100%;
+.modal-state:checked + .modal .modal__inner {
+  top: 0;
+}
+
+.modal__inner {
+  transition: top .25s ease;
   position: absolute;
-  width: 100%;
+  top: -20%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  margin: auto;
+  overflow: auto;
+  background: #fff;
+  border-radius: 5px;
+  padding: 1em 2em;
+  height: 50%;
 }
 
-.flip-cards .card-front {
-  -webkit-transform: perspective(1000) rotateY(0);
-  -moz-transform: perspective(1000) rotateY(0);
-  -ms-transform: perspective(1000) rotateY(0);
-  -o-transform: perspective(1000) rotateY(0);
-  transform: perspective(1000) rotateY(0);
-  z-index: 900;
+.modal__close {
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  width: 1.1em;
+  height: 1.1em;
+  cursor: pointer;
 }
 
-.flip-cards .card-back {
-  -webkit-transform: rotateY(-180deg);
-  -moz-transform: rotateY(-180deg);
-  -ms-transform: rotateY(-180deg);
-  -o-transform: rotateY(-180deg);
-  transform: rotateY(-180deg);
-  z-index: 800;
+.modal__close:after,
+.modal__close:before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 1.5em;
+  background: #ccc;
+  display: block;
+  transform: rotate(45deg);
+  left: 50%;
+  margin: -3px 0 0 -1px;
+  top: 0;
 }
 
-/* Button Card Colors */
-.flip-cards .panel {
-  border: none;
+.modal__close:hover:after,
+.modal__close:hover:before {
+  background: #aaa;
 }
 
-.flip-cards .panel i,
-.flip-cards .panel p,
-.flip-cards .panel a,
-.flip-cards .panel small {
-  color: white;
+.modal__close:before {
+  transform: rotate(-45deg);
 }
 
-/* First button color */
-.flip-cards li:first-child > .button {
-  background-color: rgba(40, 57, 77, 0.8);
-}
-.flip-cards li:first-child > .panel {
-  background-color: rgba(40, 57, 77, 1);
-}
-
-/* Second button color */
-.flip-cards li:nth-child(2) > .button {
-  background-color: rgba(109, 193, 202, 0.8);
-}
-.flip-cards li:nth-child(2) > .panel {
-  background-color: rgba(109, 193, 202, 1);
+@media screen and (max-width: 768px) {
+	
+  .modal__inner {
+    width: 90%;
+    height: 90%;
+    box-sizing: border-box;
+  }
 }
 
-/* Third button color */
-.flip-cards li:nth-child(3) > .button {
-  background-color: rgba(211, 81, 45, 0.8);
-}
-.flip-cards li:nth-child(3) > .panel {
-  background-color: rgba(211, 81, 45, 1);
+
+/* Other
+ * =============================== */
+.highlight-container{
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 4em 10em;
+    width: 100%;
 }
 
-/* Fourth button color */
-.flip-cards li:nth-child(4) > .button {
-  background-color: rgba(235, 167, 36, 0.8);
-}
-.flip-cards li:nth-child(4) > .panel {
-  background-color: rgba(235, 167, 36, 1);
+.highlight-box{
+    margin: 1em;
+    text-align: center;
 }
 
-/* Fifth button color */
-.flip-cards li:nth-child(5) > .button {
-  background-color: rgba(75, 135, 150, 0.8);
-}
-.flip-cards li:nth-child(5) > .panel {
-  background-color: rgba(75, 135, 150, 1);
+.btn {
+    width: 12em;
+    height: 3.5em;
+    border: .1em solid #777;
+    border-radius: .5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    word-wrap: normal;
+    word-break: keep-all;
+    box-shadow: .05em .05em #003660;
+    cursor: pointer;
+    padding: .5em 1em;
+    color: #003660;
+    border-radius: 1em;
 }
 
-/* Sixth (last) button color */
-.flip-cards li:last-child > .button {
-  background-color: rgba(100, 66, 87, 0.8);
+.callout1{
+    font-family: 'Roboto',sans-serif;
+    font-size: 2em;
+    color: #003660;
+
+    }
+
+.btn:hover,
+.btn:focus {
+    background: #003660;
+    color: white;
+    border-color: white;
 }
-.flip-cards li:last-child > .panel {
-  background-color: rgba(100, 66, 87, 1);
-  color: white;
+.btn:active {
+  background: #27ae60;
+  box-shadow: 0 1px 2px rgba(0,0,0, .2) inset;
 }
 
-/*
- * RESPONSIVENESS -------------------------------------------------
- */
-@media only screen and ( max-width: 40em ) {
-	.hero-unit {
-		height: 800px;
-	}
-	.flip-cards li {
-		width: 50%;
-		/*height: 160px;*/
-	}
+.btn--blue {
+  background: #2980b9;
 }
-@media only screen and ( max-width: 30em ) {
-	.hero-unit h1 {
-		font-size: 1.75rem;
-	}
-	.hero-unit h3 {
-		font-size: 1.125rem;
-	}
+
+.btn--blue:hover,
+.btn--blue:focus {
+  background: #3498db;
 }
-@media only screen and ( max-width: 25em ) {
-	.hero-unit {
-		height: 920px;
-	}
-	.hero-unit hgroup {
-		margin: 2rem 0;
-	}
-	.hero-unit h1 {
-		font-size: 1.35rem;
-		padding-bottom: 0.25rem;
-	}
-	.hero-unit h3 {
-		font-size: 0.85rem;
-	}
-	.hero-unit .card-icon {
-		font-size: 1.35rem;
-	}
-	.hero-unit .card-back .card-icon {
-		font-size: 2rem;
-		margin: 0;
-		padding: 5px 0 20px 5px;
-	}
-	.flip-cards li {
-		width: 100%;
-		font-size: 1.35rem;
-		height: 120px;
-	}
-	.flip-cards .panel p {
-		display: none;	
-	}
-	.flip-cards .panel small {
-		margin: 0;
-	}
-	.button.large {
-		padding: 2rem;
-	}
-	.button.large a {
-		font-size: 1.35rem;
-	}
+
+.btn--blue:active {
+  background: #2980b9;
 }
+
+/*Moddal End*/
+
+.trustedby-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center; 
+}
+
+.trustedby-box{
+    width: 18em;
+    height: 18em;
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.trustedby-box img{
+    object-fit: scale-down;
+    height: 12em; 
+}
+
+.trustedby-box p{
+    margin: .5em;
+    text-align: center;
+}
+
+.trustedby-box span{
+    font-weight: bold;
+}
+
+.section-break{
+    height: 4em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2980b9;
+    color: white;
+    margin: 2em;
+    border-radius: 5em 0 5em 0;
+}
+
+
