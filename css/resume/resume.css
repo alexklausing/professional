@@ -1,0 +1,54 @@
+
+.download-containter{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 20em; 
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../../root/images/paddles.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.download-btn{
+    width: 20em;
+    height: 4em;
+    background-color: coral;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;  
+    box-shadow: .3em .3em var(--lightgrey);
+}
+
+.download-btn a{
+    font-size: 2em;
+    font-family: 'Roboto',sans-serif;
+    color: white;
+    text-decoration: none;
+}
+
+.download-btn:hover{
+    background-color: #FF8B61;
+    border: .3em solid var(--darkblue);
+}
+
+.download-btn:hover a{
+    color: var(--darkblue);
+}
+
+
+
+.pdf{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    
+}
+
+iframe{
+    width: 100%;
+}

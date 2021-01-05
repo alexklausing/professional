@@ -1,6 +1,6 @@
 .cover{
     width: 100%;
-    height: 60%;
+    height: calc(100vh);
     background-image:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),url('https://images.unsplash.com/photo-1532339142463-fd0a8979791a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');  
     background-repeat: no-repeat;
     background-position:center;
@@ -29,6 +29,40 @@
     font-size: 2.25em;   
 }
 
+.intro-container{
+    display: inline-block;
+    padding: 3vh 20em;
+    border: 3em solid var(--darkblue);
+}
+
+.intro-container p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    text-align: center;
+    color: black;
+    font-weight: 400;
+}
+
+.signature{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 1em 0em;  
+}
+.signature img{
+    width: 25em;
+    padding-left: 2em;
+}
+
+.signature p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+    color: black;
+    font-weight: 300;
+}
 
 .endorsement-container{
     display: flex;
@@ -39,6 +73,7 @@
     margin: 3em 0em;
     width: 100%;
     height: auto;
+    z-index: -10;
 }
 
 .endorsement-box{
@@ -299,8 +334,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #2980b9;
-    color: white;
+    background: var(--white);
+    color: var(--navyblue);
     margin: 2em;
     border-radius: 5em 0 5em 0;
 }

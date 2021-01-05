@@ -1,5 +1,5 @@
 <?php
-require 'assets/header.php';
+include'assets/header.php';
 ?>
 
 <!--Page Specific Title and Description Information for SEO-->
@@ -8,16 +8,14 @@ require 'assets/header.php';
     <title>Hire Alex Klausing in 2021! | Nonprofit | Outdoor Recreation</title>
     <meta name="description" content="A professional portfolio of Alex Klausing, nonprofit, camping, and outdoor recreation programs professional with ten years of experiance.">
     <link rel="stylesheet" href="css/index.css" type="text/css">
-    <script src="js/modal.js"></script>
-
 </head>
 
 <!--Navigation Bar-->
-<nav>
+<header>
     <?php
-    require 'assets/navigation.php'
+ include 'assets/navigation.php';
     ?>
-</nav>
+</header>
 
 <body>
     <section class="cover">
@@ -26,6 +24,16 @@ require 'assets/header.php';
             <p class="tagline1">Nonprofit Leadership | Camp Administration | Adventure Programming</p>
         </div>
     </section>
+  
+  
+
+  
+<section class="intro-container">
+            <p>I have been in the camping and outdoor industry since working my first season on a summer camp staff in 2003 and continued through 2010. From 2010 to 2020, I served as a full-time professional with the Boy Scouts of America focusing on program and outdoor adventure. I have a proven record of success in all non-profit operations functions, including volunteer recruitment, fundraising, and board engagement.</p>
+<div class="signature">
+           <img src="images/AlexSign.png" alt="Alex Klausing's Signature">      
+   </div>         
+</section>
   
 <section class="highlight-container">
 <div class="highlight-box">
@@ -155,17 +163,18 @@ require 'assets/header.php';
     <section class="skills-container">
         <div class="skills-box"></div>
     </section>
-    <section class="intro-container">
-        <div class="intro-box">
-           
-        </div>
-</section>
+
+
     
 
 
 
 
 </body>
+
+<footer>
+        <script src="js/modal.js"></script>
+</footer>
 <?phpd
 require 'assets/footer.php';
 ?>

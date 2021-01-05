@@ -20,3 +20,4 @@ if(empty($elements[0])) {                       // No path elements means home
         header('HTTP/1.1 404 Not Found');
         Show404Error();
 }
+
