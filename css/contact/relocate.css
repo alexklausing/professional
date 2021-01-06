@@ -1,0 +1,101 @@
+.cover-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height:50vh;
+    background-image: url("../../../root/images/cover_canoe.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+.cover-box{
+    font-size: 3em;
+    font-family: 'Roboto',sans-serif;
+    color: white;
+}
+
+
+.relocation-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0em 10%;
+    margin-top: 4em;
+}
+
+.sub-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.relocation-box{
+    width: 10em;
+    height: 10em;
+    background-color: red;
+    margin: 2em;
+}
+
+.title{
+    font-size: 3em;
+    font-family: 'Roboto',sans-serif;
+    color: var(--darkblue);
+}
+
+.state{
+    background-color: steelblue;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 1em;
+    }
+
+.state p{
+    font-family: 'Open Sans',sans-serif;
+    font-size: 1.75em;
+    color: white;
+    position: absolute;
+    top: 3em;
+}
+
+.state img{
+    width: auto;
+    height: 3em;
+    position: absolute;
+    top: 2em;
+    filter: brightness(0) invert(1);
+}
+
+.region{
+    background-color: forestgreen;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 1em;
+    width: 25em;
+    }
+
+.region p{
+    font-family: 'Open Sans',sans-serif;
+    font-size: 1.75em;
+    color: white;
+    position: absolute;
+    top: 3em;
+}
+
+.region img{
+    width: auto;
+    height: 3em;
+    position: absolute;
+    top: 2em;
+    filter: brightness(0) invert(1);
+}

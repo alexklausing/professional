@@ -73,10 +73,62 @@ body{
 .title{
     text-align: center;
 }
-h1{
+
+/**/
+
+h1, #headline1{
     font-family: 'Roboto',sans-serif;
     font-size: 6em;
     line-height: 2em;
     margin: 0;
     padding: 0;  
 }
+
+h2, #headline2{
+    font-family: 'Roboto',sans-serif;
+    font-size: 6em;
+    line-height: 2em;
+    margin: 0;
+    padding: 0;  
+}
+
+h3, #headline3{
+    font-family: 'Roboto',sans-serif;
+    font-size: 6em;
+    line-height: 2em;
+    margin: 0;
+    padding: 0;  
+}
+
+h4, #headline4{
+    font-family: 'Roboto',sans-serif;
+    font-size: 6em;
+    line-height: 2em;
+    margin: 0;
+    padding: 0;  
+}
+
+h5, #headline5{
+    font-family: 'Roboto',sans-serif;
+    font-size: 6em;
+    line-height: 2em;
+    margin: 0;
+    padding: 0;  
+}
+
+h6, #headline6{
+    font-family: 'Roboto',sans-serif;
+    font-size: 3em;
+    line-height: 3em;
+    margin: 0;
+    padding: 0;  
+}
+
+#para1{
+    font-family: 'Open Sans',sans-serif;
+    font-size: 2em;
+    line-height: 2em;
+}
+
+
+

@@ -1,5 +1,7 @@
-<?php
-include'assets/header.php';
+<?php 
+    $path = $_SERVER['DOCUMENT_ROOT'];
+    $path .= "/professional/assets/header.php";
+    include ($path);
 ?>
 
 <!--Page Specific Title and Description Information for SEO-->
@@ -12,9 +14,11 @@ include'assets/header.php';
 
 <!--Navigation Bar-->
 <header>
-    <?php
- include 'assets/navigation.php';
-    ?>
+<?php 
+    $path = $_SERVER['DOCUMENT_ROOT'];
+    $path .= "/professional/assets/navigation.php";
+    include ($path);
+?>
 </header>
 
 <body>
@@ -29,7 +33,7 @@ include'assets/header.php';
 
   
 <section class="intro-container">
-            <p>I have been in the camping and outdoor industry since working my first season on a summer camp staff in 2003 and continued through 2010. From 2010 to 2020, I served as a full-time professional with the Boy Scouts of America focusing on program and outdoor adventure. I have a proven record of success in all non-profit operations functions, including volunteer recruitment, fundraising, and board engagement.</p>
+            <p>I have been in the camping and outdoor industry since working my first season on a summer camp staff in 2003 and continued through 2010. From 2010 to 2020, I served as a full-time professional with the Boy Scouts of America focusing on program and outdoor adventure. I have a proven record of success in all non-profit operations functions, including volunteer recruitment, fundraising, and board engagement. I can't wait to put my experiance to work!</p>
 <div class="signature">
            <img src="images/AlexSign.png" alt="Alex Klausing's Signature">      
    </div>         
@@ -49,7 +53,7 @@ include'assets/header.php';
   <div class="modal__inner">
     <label class="modal__close" for="modal-1"></label>
     <h2>Fundraising Experiance</h2>
-    <p>With nearly 10 years of professional fundraising experiance, Alex has been exposed to almost every type of development process. Annual campaigns are where most of Alex's experiance lies.</p>
+    <p>With nearly 10 years of professional fundraising experiance, Alex has been exposed to almost every type of development process. Annual campaigns are where most of Alex's experience lies.</p>
   </div>
 </div>
    
@@ -61,8 +65,8 @@ include'assets/header.php';
   <label class="modal__bg" for="modal-2"></label>
   <div class="modal__inner">
     <label class="modal__close" for="modal-2"></label>
-    <h2>Fundraising Experiance</h2>
-    <p>With nearly 10 years of professional fundraising experiance, Alex has been exposed to almost every type of development process. Annual campaigns are where most of Alex's experiance lies.</p>
+    <h2>50+ Events</h2>
+    <p></p>
   </div>
 </div>   
    
@@ -160,20 +164,20 @@ include'assets/header.php';
 </section>
         
 </section>
+<p id="headline3">Relevant Skills</p>
     <section class="skills-container">
-        <div class="skills-box"></div>
+        <div class="skills-box">Volunteer Recruitment<br><span>10 Years</span></div>
+        <div class="skills-box">Seasonal Staff Recruitment<br><span>6 Years</span></div>
+        <div class="skills-box">Seasonal Staff Training<br><span>6 Years</span></div>
+        <div class="skills-box">Volunteer Recruitment<br><span>10 Years</span></div>
+        <div class="skills-box">Volunteer Recruitment<br><span>10 Years</span></div>
     </section>
-
-
-    
-
-
 
 
 </body>
 
 <footer>
-        <script src="js/modal.js"></script>
+        <script src="js/js.js"></script>
 </footer>
 <?phpd
 require 'assets/footer.php';

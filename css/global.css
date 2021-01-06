@@ -26,6 +26,12 @@ html, body{
     line-height: 1.5em;
 }
 
+#para2{
+    font-family: 'Open Sans',sans-serif;
+    font-size: 1.2em;
+    line-height: 1.5em;
+}
+
 #headline3{
     font-family: 'Roboto',sans-serif;
     font-size: 3em;
