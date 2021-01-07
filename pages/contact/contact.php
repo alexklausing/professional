@@ -42,6 +42,14 @@
             <img src="images/baseline_email_black_18dp.png" alt="">
             <a href="mailto:alex.klausing@outlook.com">alex.klausing@outlook.com</a>
         </div>
+        
+   <div class="contact-item" id="linkedin">
+       <a class="contact-box-sub" href="https://www.linkedin.com/in/alexklausing/">
+       <img src="../../../root/images/icons/LI-In-Bug.png" alt="LinkedIn Logo">
+        <p>/alexklausing</p>
+       </a>
+   </div>     
+        
         <div class="contact-item" id="address">
             <address>2824 Mc Duffee Circle <br>North Aurora, Illinois 60542</address>
         </div>
@@ -49,6 +57,8 @@
            <div class="relocate">
             <p>Yes I'm willing to relocate! <br><span>Learn More</span></p>
         </div></a>
+   
+        
     </div>
 
 </div>

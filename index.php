@@ -33,7 +33,8 @@
 
   
 <section class="intro-container">
-            <p>I have been in the camping and outdoor industry since working my first season on a summer camp staff in 2003 and continued through 2010. From 2010 to 2020, I served as a full-time professional with the Boy Scouts of America focusing on program and outdoor adventure. I have a proven record of success in all non-profit operations functions, including volunteer recruitment, fundraising, and board engagement. I can't wait to put my experiance to work!</p>
+            <p>   
+            I have been in the camping and outdoor industry since working my first season on a summer camp staff in 2003 and continued through 2010. From 2010 to 2020, I served as a full-time professional with the Boy Scouts of America focusing on program and outdoor adventure. I have a proven record of success in all non-profit operations functions, including volunteer recruitment, fundraising, and board engagement. I can't wait to put my experiance to work!</p>
 <div class="signature">
            <img src="images/AlexSign.png" alt="Alex Klausing's Signature">      
    </div>         

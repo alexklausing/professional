@@ -37,20 +37,28 @@
         <p class="title">States</p>
     </div>
     <div class="sub-container">
-        <div class="relocation-box state">
-            <img src="images/kentucky-silhouette.png" alt="Kentucky">
-            <p>Kentucky</p>
-        </div>
+
         <div class="relocation-box state">
             <img src="images/florida-silhouette.png" alt="Florida">
             <p>Florida</p>
         </div>
+
+        <div class="relocation-box state">
+            <img src="images/kentucky-silhouette.png" alt="Kentucky">
+            <p>Kentucky</p>
+        </div>
+
+        <div class="relocation-box state">
+            <img src="images/north-carolina-silhouette.png" alt="North Carolina">
+            <p>North Carolina</p>
+        </div>
+
         <div class="relocation-box state">
             <img src="images/virginia-silhouette.png" alt="Virginia">
             <p>Virginia</p>
         </div>
     </div>
-        <div class="sub-container">
+    <div class="sub-container">
         <p class="title">Regions</p>
     </div>
     <div class="sub-container">
@@ -67,6 +75,8 @@
             <p>Along the Appalachian Trail</p>
         </div>
     </div>
+    
+    
 </section>
 
 </body>
