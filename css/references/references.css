@@ -1,0 +1,117 @@
+.reference-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 9em 8em 0em 8em;
+}
+
+.reference-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #FAFAFA;
+    height: 20em;
+    flex-basis: 40%;
+    min-width: 30em;
+    margin: 3em 0em;
+    border-radius: 2em;
+    box-shadow: .2em .2em var(--midblue);
+}
+
+.img{
+    flex-basis: 20em;
+    min-width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-border{
+    object-fit:fill;
+    height: 18em;
+    width: auto;
+    border-radius: 1em;   
+    border: -.5em solid var(--midblue);
+    z-index: 2;
+    transform: rotateZ(-3deg);
+}
+
+.reference-box:nth-child(2) .img-border{
+    transform: rotateZ(0deg);
+    border: .5em solid orange;
+}
+
+.reference-box:nth-child(3) .img-border{
+    transform: rotateZ(0deg);
+    border: .5em solid forestgreen;
+}
+
+.reference-box:nth-child(4) .img-border{
+    transform: rotateZ(5deg);
+    border: .5em solid var(--yellow);
+}
+
+.img-border img{
+    object-fit:fill;
+    height: 100%;
+    width: auto;
+    filter: grayscale(100%);
+    border-radius: 1em;
+    position: relative;
+
+}
+
+.reference-text{
+    padding-left: 2em;
+    width: 65%;
+    background-color: yellow;
+    order: 1;
+    position: relative;
+
+}
+
+.reference-box:nth-child(odd) .reference-text{
+    order: 2;
+}
+
+.who
+{
+    position: absolute;
+    bottom: -2em;
+    font-family: 'Roboto',sans-serif;
+    background-color: var(--darkgrey);
+
+    width: 120%;
+    transform: rotateZ(3deg);
+    left: -1.5em;
+    text-align: center;
+    border-radius: 1em;
+    color: white;
+    padding: .2em 0em;
+}
+
+.name{
+    font-size: 1.5em;
+    font-weight: 300;
+    letter-spacing: .1em;
+}
+
+.title,
+.company{
+    font-size: 1.1em;
+    font-weight: 200;
+    letter-spacing: .025em
+}
+
+.quote{
+    position: absolute;
+    top: 0em;
+    transform: translateY(-50%);
+    font-family: 'Open Sans',sans-serif;
+    font-size: 1.5em;
+    font-weight: 200;
+}

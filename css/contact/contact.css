@@ -21,7 +21,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
 .contact-box-sub{
@@ -100,10 +99,21 @@
     background-color: var(--darkblue);
 }
 
+.contact-box-linkedin{
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-box-linkedin p{
+    font-size: 1em;
+    text-decoration: none;
+}
+
 #linkedin img{
     height: 1.5em;
     width:auto;
-    
 }
 
 

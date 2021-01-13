@@ -7,12 +7,14 @@
 
 :root{
     --darkblue: #003A66;
+    --midblue: #4C7593;
     --navyblue: #00233D;
     --yellow: #FFD35C;
     --white: #F5F5F5;
     --coral: #FF875C;
     --darkgrey: #525053;
     --lightgrey: #CDCBCD;
+    --brown:#6F4930;
 }
 
 html, body{
