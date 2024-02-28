@@ -1,0 +1,60 @@
+<?php
+include '../../config.php';
+$header = $base_path . '/assets/header.php';
+$footer_path = $base_path . '/assets/footer.php';
+$navigation_path = $base_path . '/assets/navigation2.php';
+
+include $header;
+?>
+
+<!--Page Specific Title and Description Information for SEO-->
+
+<head>
+    <title>Alex Klausing | Nonprofit Fundraising Consultant</title>
+    <meta name="description" content="Fundraising consulting services and training for nonprofits">
+    <link rel="stylesheet" href="css/consulting-services/fundraising.css" type="text/css">
+
+</head>
+
+<body>
+    <?php
+    include($navigation_path);
+    ?>
+    <main>
+        <section>
+            <div class="heading">
+                <h4>Consulting Services</h4>
+            </div>
+
+            <div class="cards">
+                <div class="card">
+                    <div class="card-title">
+                        <h5>Fundraising</h5>
+                    </div>
+                    <div class="card-content">
+                        <ul>
+                            <li>Fundraising Strategy Development</li>
+                            <li>Campaign Planning and Execution</li>
+                            <li>Training for Campaign Workers</li>
+                            <li>Database Optimization</li>
+                            <li>Prospect Research</li>
+                            <li>Event Planning and Management</li>
+                        </ul>
+                    </div>
+                    <div class="image">
+                        <img src="media/photos/dinner.JPG" alt="fundraising dinner">
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </section>
+
+
+    </main>
+    <?php
+    include($footer_path);
+    ?>
+</body>

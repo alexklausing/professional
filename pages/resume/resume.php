@@ -1,32 +1,24 @@
-<?php 
-    $path = $_SERVER['DOCUMENT_ROOT'];
-    $path .= "/professional/assets/header.php";
-    include ($path);
+<?php
+include '../../config.php';
+$header = $base_path . '/assets/header.php';
+$footer_path = $base_path . '/assets/footer.php';
+$navigation_path = $base_path . '/assets/navigation2.php';
+
+include $header;
 ?>
+
 
 <!--Page Specific Title and Description Information for SEO-->
 
 <head>
-    <title>Hire Alex Klausing in 2021! | Nonprofit | Outdoor Recreation</title>
-    <meta name="description" content="A professional portfolio of Alex Klausing, nonprofit, camping, and outdoor recreation programs professional with ten years of experiance.">
+    <title>Hire Alex Klausing in 2024! | Nonprofit | Outdoor Recreation</title>
+    <meta name="description" content="A professional portfolio of Alex Klausing, nonprofit, camping, and outdoor recreation programs professional with ten years of experience.">
 
-<?php 
-    $path = $_SERVER['DOCUMENT_ROOT'];
-    $path .= "/professional/assets/navigation.php";
-    include($path);
-?>
+    <?php
+    include($navigation_path);
+    ?>
 
-
-
-<style>
-<?php 
-    $path = $_SERVER['DOCUMENT_ROOT'];
-    $path .= "/professional/css/resume/resume.css";
-    require $path;
-?>
-</style>
-
-
+    <link rel="stylesheet" href="css/resume/resume.css" type="text/css">
 
 </head>
 
@@ -35,17 +27,14 @@
 
 <body>
 
-<div class="download-containter">
-    <div class="download-btn">
-        <a href="../../../documents/Alex%20Klausing%20Resume.pdf" download>Download Resume</a>
+    <div class="download-containter">
+        <div class="download-btn">
+            <a href="media/documents/Alex%20Klausing%20Resume.pdf" download>Download Resume</a>
+        </div>
     </div>
-</div>
-<div class="pdf">
+    <div class="pdf">
 
 
-<iframe src="../../../documents/Alex%20Klausing%20Resume.pdf" frameborder="0" height="800px" allowfullscreen="true" marginheight="300px"></iframe>
-</div>
+        <iframe src="media/documents/Alex%20Klausing%20Resume.pdf" frameborder="0" height="800px" allowfullscreen="true" marginheight="300px"></iframe>
+    </div>
 </body>
-
-
-

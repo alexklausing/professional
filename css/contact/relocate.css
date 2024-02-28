@@ -4,17 +4,18 @@
     align-items: center;
     width: 100%;
     height:50vh;
-    background-image: url("../../../root/images/cover_canoe.jpeg");
+    background-image: url("../../media/photos/cover_canoe.jpeg");
     background-size: cover;
     background-position: center;
 }
 
 .cover-box{
-    font-size: 3em;
     font-family: 'Roboto',sans-serif;
     color: white;
+    font-size: 3rem;
+    line-height: 3rem;
+    font-weight: 400;
 }
-
 
 .relocation-container{
     display: flex;
@@ -25,13 +26,29 @@
     padding: 0em 10%;
     margin-top: 4em;
 }
+.explanation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 3vh;
+    border: .7rem solid var(--darkblue);
+    border-radius: 4rem;
+    margin: 0vh 0vw 8vh 0vw;
+
+}
 
 .sub-container{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;s
     flex-wrap: wrap;
     width: 100%;
+    margin: 0vh 0vw 4vh 0vw;
+}
+
+.sub-container:nth-child(5){
+    margin: 0vh 0vw 10vh 0vw;
 }
 
 .relocation-box{
@@ -80,7 +97,6 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    position: relative;
     border-radius: 1em;
     width: 25em;
     }
@@ -89,14 +105,5 @@
     font-family: 'Open Sans',sans-serif;
     font-size: 1.75em;
     color: white;
-    position: absolute;
-    top: 3em;
-}
-
-.region img{
-    width: auto;
-    height: 3em;
-    position: absolute;
-    top: 2em;
-    filter: brightness(0) invert(1);
+    text-align: center;
 }

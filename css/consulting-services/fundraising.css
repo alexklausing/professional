@@ -1,0 +1,77 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin: 6rem;
+}
+
+.heading {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.block{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 2rem 8rem 0 8rem;
+}
+
+.card img {
+    width: auto;
+    height:400px;
+    margin: 2rem;
+    border: .2 solid var(--slate_grey);
+    box-shadow: 3px 3px 5px 3px rgba(218, 165, 32, 0.5);
+    border-radius: 1rem;
+    position: absolute;
+    top: 0%; 
+    left: 90%;
+    z-index: -1; 
+
+}
+
+.card {
+    position: relative;
+    height: 475px;
+    width: 400px;
+    background-color: var(--sky_white);
+    border: .15rem solid var(--darkblue);
+    border-radius: 1rem;
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.5);
+    padding: 1.5rem;
+    transition: box-shadow 0.2s ease;
+ 
+}
+
+.card:hover {
+    position: relative;
+    box-shadow: 2px 2px 5px 2px var(--camp_blue); 
+
+}
+
+
+
+
+.card-title h5{
+    text-align: center;
+    margin: 1rem;
+    color: var(--darkblue);
+
+}
+
+.card-title ul{
+    padding: 0 0 0 1rem;
+}
+
+.card-title li{
+    margin: .5rem 0 .5rem 0;
+    color: var(--text_grey);
+}
+
+
+

@@ -1,44 +1,44 @@
 <head>
-<style>
-
-<?php 
-    $path = $_SERVER['DOCUMENT_ROOT'];
-    $path .= "/professional/css/global.css";
-    include ($path);
-?>
-
-<?php 
-    $path = $_SERVER['DOCUMENT_ROOT'];
-    $path .= "/professional/css/navigation.css";
-    include ($path);
-?>
-</style>
+  <link rel="stylesheet" href="css/navigation.css" type="text/css">
 </head>
+
 <body>
 
-<header class="header">
-  
-<a id="logo-box-link" href="index.php">
+  <header class="header">
+
+    <a id="logo-box-link" href="index.php">
       <div id="logo-box">
-          <img class="hiker" src="images/hiking_silhouette.png" alt="hiker">
-          <p class="logo-text">Alex<br><span>Klausing</span></p>
+        <img class="hiker" src="media/brandkit/hiking_silhouette.png" alt="hiker">
+        <p class="logo-text">Alex<br><span>Klausing</span></p>
       </div>
-  </a>
-  
-  <input class="menu-btn" type="checkbox" id="menu-btn" />
-  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    </a>
 
-<ul class="menu">
-    <li><a href="index.php">Home</a></li>
-    <li><a href="pages/resume/resume.php">Resume</a></li>
-    <li><a href="pages/references/references.php">References</a></li>
-</ul>
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
 
-<ul class="menu contact">
-  <li><a href="pages/contact/contact.php">Contact</a></li>
-</ul>
+    <ul class="menu">
+      <div class="dropdown">
+        <button class="dropbtn">Dropdown</button>
+        <div class="dropdown-content">
+          <a href="pages/about/about.php">About Me</a>
+          <a href="pages/resume/resume_sec.php">Resume</a>
+          <a href="pages/workexamples/coding.php">Work Examples</a>
+          <a href="pages/references/references.php">References</a>
+        </div>
+      </div>
+    </ul>
 
-</header>
+    <ul class="menu contact">
+      <li><a href="pages/contact/contact.php">Contact</a></li>
+    </ul>
 
-    
+    <div class="hamburger-menu">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+  </header>
+
+
 </body>

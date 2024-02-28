@@ -1,0 +1,342 @@
+nav{
+  position: relative;
+  background-color: var(--darkblue);
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  height: auto;
+  padding: 0 5rem 0 5rem;
+}
+
+.nav-container,
+.nav-contact{
+/* .logo{ */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-container{
+  width: 100vw;
+  background-color: var(--dark_blue);
+  justify-content: space-between;
+  position: relative;
+}
+
+/* Logo */
+
+#logo-box-link {
+display: inline-flex;
+width: 260px;
+text-align: right;
+font-size: 2em;
+padding: 10px 20px;
+text-decoration: none;
+flex: 1;
+}
+
+#logo-box:hover .logo-text{
+color: var(--coral);
+}
+
+#logo-box-link a:visited #logo-box p {
+color: #FFFFFF;
+}
+
+#logo-box {
+display: flex;
+justify-content: flex-start;
+align-items: center;
+cursor: pointer;
+color: #FFF;
+
+}
+
+.hiker {
+height: 48px;
+width: auto;
+filter: brightness(0) invert(1);
+margin: .25rem 0rem;
+}
+
+#logo-box .coral {
+filter: none;
+visibility: hidden;
+display: none;
+}
+
+#logo-box:hover .hiker{
+filter: none;
+visibility: hidden;
+display: none;
+}
+
+#logo-box:hover .coral{
+height: 48px;
+width: auto;
+margin: .25rem 0rem;
+filter: none;
+visibility: visible;
+display:block;
+}
+
+.logo-text {
+font-family: 'roboto', sans-serif;
+font-weight: 200;
+font-size: 1.25em;
+padding: 0rem 0rem 0rem .4rem;
+line-height: 1rem;
+letter-spacing: .4rem;
+text-align: left;
+color: white;
+}
+
+span {
+font-weight: 500;
+font-size: 1.25rem;
+letter-spacing: .05rem;
+}
+
+
+/* .logo Content from Merged Version, */
+.nav-contact{
+  flex: 1;
+}
+
+.nav-links{
+  flex:3;
+}
+
+ul{
+  /* width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center; */
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: unset;
+  display: flex;
+  justify-content:flex-start;
+}
+
+li{
+  list-style: none; 
+  margin: 0em 3rem;
+}
+
+.nav-links li{
+  /* padding: 1rem 3rem;   */
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: .05rem;
+}
+
+.nav-links a{
+    text-decoration: none;
+    display: inline-block; 
+    transition: transform 0.3s ease; 
+}
+
+.nav-links a:hover{
+  color: var(--coral);
+  font-weight:600;
+  transform: scale(1.05); 
+}
+
+.nav-contact {
+  background-color: var(--white);
+  border: .3rem solid var(--coral);
+  border-radius: 1rem;
+  width: 4rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  transition: background-color 0.25s, color 0.25s; 
+  flex:.5;
+}
+
+.nav-contact a {
+  color: var(--coral);
+  font-size: 1.25rem;
+  letter-spacing: .15rem;
+  transition: background-color 0.25s, color 0.25s;
+  text-decoration: none; 
+}
+
+.nav-contact:hover{
+  background-color: white;
+  transition-delay: 0.1s;
+}
+
+.nav-contact:hover a {
+  color: var(--coral);
+  font-weight: bold;
+
+}
+.dropdown{
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  z-index: 1;
+}
+
+
+.dropdown-content a{
+   color: var(--dark_blue);
+   line-height: 2rem;
+   white-space: nowrap;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  background: linear-gradient(to top, rgba(245, 245, 245, 1), rgba(245, 245, 245, 0.75));
+  border-radius: 0 0 1rem 1rem ;
+}
+
+/* .nav-links a:hover .dropdown-content{} */
+.nav-links a:hover .dropdown-content,
+.dropdown:hover .dropdown-content,
+.dropdown:focus .dropdown-content{
+.dropdown-content {
+  top: 100%;
+  visibility: hidden;
+  position: absolute;
+  width: auto;
+  background-color: var(--dark_blue);
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+
+}
+
+.dropdown:hover .break{
+  display: block;
+  visibility: visible;
+}
+
+/* hamburger container */
+.hamburger{
+  display: none;
+  visibility: hidden;
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  right: 5rem;
+  right: 5vw;
+  top: 5vh;
+  z-index:1;
+/*   top: 2rem;
+  right: 3rem; */
+}
+
+/* this code uses a checkbox to as on/off switch for menu display in mobile format. The code below is for the checkbox. To see the checkbox, set opacity above 0.*/
+.hamburger input{
+  width: 100%;
+  height: 100%; 
+  opacity: 0;
+  z-index: 1;
+  cursor: pointer;
+  z-index:1;
+}
+
+/* design and placement of hamburger icon */
+.line{
+  border: .25rem solid var(--white);
+  background-color: var(--white);
+  border-radius: .2rem;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index:-1;
+}
+
+.bar1{
+  top: 25%;
+  transition: .5s ease;
+
+}
+
+.bar2{
+  top: 50%;
+  transition: .75s ease-out;
+
+}
+
+.bar3{
+  top: 75%;
+  transition: .5s ease;
+
+}
+
+/* hamburger menu animation */
+#menubtn:checked ~ .bar1 {
+  transform: rotate(45deg) translate(-1rem, 2.4rem);
+}
+
+#menubtn:checked ~ .bar2 {
+  transform: translatex(2.5rem);
+  visibility: hidden;
+}
+
+#menubtn:checked ~ .bar3 {
+  transform: rotate(-45deg) translate(-.65rem,-2.8rem);
+}
+
+@media screen and (max-width:1200px){
+  .nav-container{
+    display: none;
+    visibility: hidden;
+  }
+  
+  .hamburger{
+    display: block;
+    visibility: visible;
+  }
+  
+  .nav-container,
+  .nav-flex,
+  .nav-contact{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  ul{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  }
+
+  .nav-container{
+    height: auto;
+  }
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus .dropdown-content{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  visibility: visible;
+  top:0; 
+}
+  
+  .nav-contact{
+    margin-top: 5vh;
+  }
+}

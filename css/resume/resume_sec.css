@@ -1,26 +1,105 @@
+.download-containter{   
+    width: 100%;
+    height: 30vh; 
+    background-image:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),url('https://images.unsplash.com/photo-1532339142463-fd0a8979791a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+@media all and (max-width:500px){
+    .download-containter{
+        height: 40vh; 
+    }
+}
+
+.download-btn{
+    width: 20rem;
+    height: 4rem;
+    background-color: coral;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;  
+    box-shadow: .3rem .3rem var(--lightgrey);
+    position: absolute;
+    top: 70%;    
+    left: 49%;
+    transform: translate(-50%, -50%);
+    border-radius: .5rem;
+}
+
+@media all and (max-width:350px){
+    .download-btn{
+        width: 18rem;
+        height: 3.75rem;
+    }
+}
+
+
+
+.download-btn a{
+    color: white;
+    text-decoration: none;
+}
+
+.download-btn:hover{
+    background-color: #FF8B61;
+    border: .3rem solid var(--darkblue);
+}
+
+.download-btn:hover a{
+    color: var(--darkblue);
+}
+
+
 .role-container{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
     width: 100%;
-    padding-top: 8rem;
-
 }
 
 .role-box{
     display: flex;
     flex-direction: column;
-    margin: 4em 10em;
+    margin-top: 6vh;
+    margin-bottom: 6vh;    
 }
+
+.role-box:not(:first-child) {
+    margin-top: 0vh;
+}
+
+
 
 .role{
     display: flex;
     flex-direction:row;
 }
 
+
+
+
 .logo-box{
     display: flex;
+}
+
+@media all and (max-width:800px) {
+    .role{
+        flex-direction: column;
+        margin: 0 0 0 0rem;
+    }   
+    .logo-box{
+        justify-content:flex-start;
+        align-items: center;
+    } 
+
+    .role-box{
+        margin: 1rem 0rem;
+    }
 }
 
 .position{
@@ -37,9 +116,18 @@
     width: 100%;
 }
 
+@media all and (max-width:600px) {
+   
+    .title-box{
+        display: flex;
+        flex-direction: column;
+    }    
+}
+
 
 .logo-box img{
     height: 10vh;
+    min-height: 120px;    
     width: auto;
     margin: 0vh 1vw 0vh 0vw;
 }
@@ -51,7 +139,6 @@
 .dates,
 .title,
 .company{
-    font-family: 'Roboto',sans-serif;
     color: var(--midblue);
 }
 
@@ -59,24 +146,8 @@
     font-variant: small-caps;
 }
 
-.title{
-    font-size: 3em;
-}
-
-.dates,
-.profile p,
-.address,
-.phone,
-.website,
-.summary,
-.accomplishments li{
-    font-family: 'Open Sans',sans-serif;
-    font-size: 1.25em;
-    line-height: 1.75em;
-}
-
 .accomplishments{
-    padding: 1em 0em 0em 5em;
+    padding: 1rem 0rem 0rem 5rem;
 }
 
 span:hover{
@@ -87,15 +158,14 @@ span:hover{
   background-color: var(--midblue);
   color: white;
   cursor: pointer;
-  padding: .2em 1em;
+  padding: .2rem 1rem;
   width: 100%;
   border: none;
   text-align: left;
   outline: none;
-  font-size: 1.5em;
-  border-top-right-radius: 1em;
-  min-width: 21em;
+  border-top-right-radius: 1rem;
 }
+
 
 .company span{
     font-weight: 600;
@@ -103,32 +173,42 @@ span:hover{
 }
 
 .company-profile:hover .company{
-    border: .2em solid var(--coral);
-    font-weight: .05em;
+    border: .2rem solid var(--coral);
+    font-weight: .05rem;
 }
 .company-profile:hover span{
 
 }
 
 .content {
-  padding: 0em 2em 2em 2em;
+  padding: 0rem 2rem 2rem 2rem;
   display: none;
   overflow: hidden;
   background-color: #f1f1f1;
 }
 
+@media all and (max-width:800px) {
+    .content{
+        padding:0;
+    }  
+}
+
 .contact{
     display: flex; 
     justify-content: space-between;
-    padding: .5em 0em;
-    text-decoration: none;
-    
+    padding: .5rem 0rem;
+    text-decoration: none;   
+}
+
+@media all and (max-width:1375px) {
+    .contact{
+        flex-direction: column;
+    }    
 }
 
 .contact i{
     color: var(--coral);
-    font-size: 1em;
-    margin-right: .4em;
+    margin-right: .4rem;
 }
 
 .phone,
@@ -143,12 +223,13 @@ span:hover{
 }
 
 .role-text{
-    padding: 1em 0em 0em 1em;
+    padding: 1rem 0rem 0rem 1rem;
 }
+
+
 
 .summary{
     border-radius: 1rem;
-    font-family: 'Open Sans',sans-serif;
     color: var(--darkblue);
     margin: 0rem 0rem 1rem 0rem;
 
@@ -159,7 +240,23 @@ span:hover{
     border-radius: 1rem;
     padding: 1.5rem 6rem;
     width: 100%;
-    font-family: 'Open Sans',sans-serif;
-    border: .3em solid var(--navyblue);
+    border: .3rem solid var(--navyblue);
     color:  var(--navyblue);
+}
+
+@media all and (max-width:800px){
+    .role-text{
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+    .summary{
+        margin: 0rem 0rem 0rem 0rem;
+    }
+    .accomplishments{
+        padding:2rem;
+    }
+    .role-container{
+        padding:.5rem;
+    }
 }

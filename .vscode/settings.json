@@ -1,0 +1,11 @@
+{
+    "cSpell.words": [
+        "klausing's"
+    ],
+    "liveServer.settings.AdvanceCustomBrowserCmdLine": "",
+    "liveServer.settings.CustomBrowser": "firefox",
+    "liveServer.settings.wait": 60,
+    "liveServer.settings.root": "/",
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 60,
+}
