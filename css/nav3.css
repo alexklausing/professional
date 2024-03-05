@@ -303,6 +303,21 @@ li{
     visibility: hidden;
   }
   
+  .nav-links a{
+    /* padding: 1rem 3rem;   */
+    font-size: 32px;
+  }
+  .nav-links li{
+    /* padding: 1rem 3rem;   */
+    margin: 1rem;
+  }
+
+  .nav-contact{
+    width: 50%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
   .hamburger{
     display: block;
     visibility: visible;
