@@ -2,7 +2,7 @@
 include '../config.php';
 $header = $base_path . '/assets/header.php';
 $footer_path = $base_path . '/assets/footer.php';
-$navigation_path = $base_path . '/assets/navigation2.php';
+$navigation_path = $base_path . '/assets/navigation.php';
 
 include $header;
 ?>

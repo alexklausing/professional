@@ -1,44 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-  <link rel="stylesheet" href="css/navigation.css" type="text/css">
+    <link rel="stylesheet" href="css/navigation.css" type="text/css">
 </head>
 
 <body>
-
-  <header class="header">
-
-    <a id="logo-box-link" href="index.php">
-      <div id="logo-box">
-        <img class="hiker" src="media/brandkit/hiking_silhouette.png" alt="hiker">
-        <p class="logo-text">Alex<br><span>Klausing</span></p>
-      </div>
-    </a>
-
-    <input class="menu-btn" type="checkbox" id="menu-btn" />
-    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-
-    <ul class="menu">
-      <div class="dropdown">
-        <button class="dropbtn">Dropdown</button>
-        <div class="dropdown-content">
-          <a href="pages/about/about.php">About Me</a>
-          <a href="pages/resume/resume_sec.php">Resume</a>
-          <a href="pages/workexamples/coding.php">Work Examples</a>
-          <a href="pages/references/references.php">References</a>
+    <nav>
+        <div class="nav-container" id="nav-container">
+            <div class="nav-flex">
+                <a id="logo-box-link" href="index.php">
+                    <div id="logo-box">
+                        <img class="hiker" src="media/brandkit/hiking_silhouette.png" alt="hiker">
+                        <img class="hiker coral" src="media/brandkit/logo_coral.png" alt="hiker">
+                        <p class="logo-text">Alex<br><span>Klausing</span></p>
+                    </div>
+                </a>
+            </div>
+            <div class="nav-flex nav-links">
+                <ul>
+                    <!-- <li><a href="#home">Home</a></li> -->
+                    <li class="dropdown">
+                        <a href="pages/resume/resume_sec.php">Resume</a>
+                        <div class="dropdown-container">
+                            <ul class="dropdown-content">
+                                <li><a href="pages/resume/resume_sec.php">Online Resume</a></li>
+                                <li><a href="media/documents/Alex Klausing Resume.pdf">Download PDF Version</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#about">Consulting Services</a>
+                        <div class="dropdown-container">
+                            <ul class="dropdown-content">
+                                <li><a href="#team">Fundraising</a></li>
+                                <li><a href="#team">Summer Camp Administration</a>
+                                    <div class="dropdown-container">
+                                        <ul class="dropdown-content">
+                                            <li><a href="#team">Purchasing Services</a></li>
+                                            <li><a href="#team">Staff Training</a></li>
+                                            <li><a href="#contact">Program Design</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a href="#contact">Nonprofit Leadership</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="pages/about/about.php">About Me</a>
+                        <div class="dropdown-container">
+                            <ul class="dropdown-content">
+                                <li><a href="pages/about/about.php">About Me</a></li>
+                                <li><a href="pages/contact/contact.php">Contact</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-flex nav-contact">
+                <li><a class="" href="pages/contact/contact.php">Contact</a></li>
+            </div>
         </div>
-      </div>
-    </ul>
 
-    <ul class="menu contact">
-      <li><a href="pages/contact/contact.php">Contact</a></li>
-    </ul>
+        <div class="hamburger">
+            <input type="checkbox" class="menubtn" id="menubtn" onclick="menutoggle()">
+            <div class="line bar1"></div>
+            <div class="line bar2"></div>
+            <div class="line bar3"></div>
+        </div>
+    </nav>
 
-    <div class="hamburger-menu">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
+    <script>
+        function menutoggle() {
+            let check = document.getElementById("menubtn");
+            let nav = document.getElementById("nav-container");
 
-  </header>
-
-
+            if (check.checked == true) {
+                nav.style.display = "flex";
+                nav.style.visibility = "visible";
+            } else {
+                nav.style.display = "none";
+                nav.style.visibility = "hidden";
+            }
+        }
+    </script>
 </body>
+
+</html>
