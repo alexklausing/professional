@@ -1,34 +1,84 @@
-<?php
-include '../../config.php';
-$header = $base_path . '/assets/header.php';
-$footer_path = $base_path . '/assets/footer.php';
-$navigation_path = $base_path . '/assets/navigation.php';
-
-include $header;
-?>
-
-<!--Page Specific Title and Description Information for SEO-->
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Hire Alex Klausing in 2024! | Nonprofit | Outdoor Recreation</title>
+    <!--Page Specific Title and Description Information for SEO-->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hire Alex Klausing | Nonprofit | Outdoor Recreation</title>
     <meta name="description" content="A professional portfolio of Alex Klausing, nonprofit, camping, and outdoor recreation programs professional with ten years of experience.">
 
-    <?php
-    include($navigation_path);
-    ?>
+    
+        <!--Fonts-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    
+        <link rel="stylesheet" href="/css/global.css" type="text/css">
+        <link rel="stylesheet" href="/css/resume/resume_sec.css" type="text/css">
+        <link rel="stylesheet" href="/css/navigation.css" type="text/css">
+        <link rel="stylesheet" href="/css/footer.css" type="text/css">
+    
+        <script src="https://kit.fontawesome.com/08b6d39fd7.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="css/resume/resume_sec.css" type="text/css">
-
-    <script src="https://kit.fontawesome.com/08b6d39fd7.js" crossorigin="anonymous"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                fetch('/assets/header.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('header-include').innerHTML = data;
+                    })
+                    .catch(error => console.error('Error fetching header:', error));
+            });
+        </script>
 
 </head>
 
 <body>
 
+    <!--Navigation Start-->
+    <nav>
+        <div class="nav-container" id="nav-container">
+            <div class="nav-flex">
+                <a id="logo-box-link" href="index.html">
+                    <div id="logo-box">
+                        <img class="hiker" src="/media/brandkit/hiking_silhouette.png" alt="hiker">
+                        <img class="hiker coral" src="/media/brandkit/logo_coral.png" alt="hiker">
+                        <p class="logo-text">Alex<br><span>Klausing</span></p>
+                    </div>
+                </a>
+            </div>
+            <div class="nav-flex nav-links">
+                <ul>
+                    <li class="dropdown">
+                        <a href="/pages/resume/resume_sec.html">Resume</a>
+                        <div class="dropdown-container">
+                            <ul class="dropdown-content">
+                                <li><a href="/pages/resume/resume_sec.html">Online Resume</a></li>
+                                <li><a href="/media/documents/Alex Klausing Resume.pdf">Download PDF Version</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-flex nav-contact">
+                <li><a href="/pages/contact/contact.html">Contact</a></li>
+            </div>
+        </div>
+    
+        <div class="hamburger">
+            <input type="checkbox" class="menubtn" id="menubtn" onclick="menutoggle()">
+            <div class="line bar1"></div>
+            <div class="line bar2"></div>
+            <div class="line bar3"></div>
+        </div>
+    </nav>
+    
+<!-- navigation end -->
+    
     <header>
         <div class="download-containter">
             <div class="download-btn">
-                <a class="t1" href="media/documents/Alex%20Klausing%20Resume.pdf" download>Download Resume</a>
+                <a class="t1" href="/media/documents/Alex%20Klausing%20Resume.pdf" download>Download Resume</a>
             </div>
         </div>
     </header>
@@ -37,10 +87,70 @@ include $header;
 
         <section class="role-container">
 
+
+
             <div class="role-box">
                 <div class="role">
                     <div class="logo-box">
-                        <img src="media/partner-logos/Greater Tampa Bay Area Council_Stack_4C.jpg" alt="">
+                        <img src="/media/partner-logos/florida-southern-college-logo.jpg" alt="">
+                    </div>
+                    <div class="position">
+
+                        <div class="title-box">
+                            <h4 class="title">Adventure Recreation & Risk Management Coordinator</h4>
+                            <p class="dates">August 2024 - Current</p>
+                        </div>
+                        <div class="company-profile">
+                            <button type="button" class="company">Florida Southern College<span>+</span></button>
+                            <div class="content">
+                                <div class="profile">
+                                    <div class="contact">
+                                        <a class="address" href="https://maps.app.goo.gl/4uTBc3x44ZSyH9B28">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            13228 N Central Ave, Tampa, FL 33612</a>
+                                        <a class="phone" href="tel:8636806290"><i class="fas fa-phone"></i>863.680.6290</a>
+                                        <a class="website" href="https://www.flsouthern.edu/"><i class="fas fa-globe"></i>https://www.flsouthern.edu/</a>
+                                    </div>
+                                    <hr>
+                                    <p>Florida Southern College, founded in 1883 in Lakeland, Florida, is a private institution enrolling over 3,000 students from across the U.S. and abroad, offering more than 70 undergraduate and graduate degree programs in fields like business, nursing, and the liberal arts. The college is nationally recognized for its personalized academic experience, with a low student-faculty ratio and the world’s largest single-site collection of Frank Lloyd Wright architecture.</p><br>
+                                    </p>
+                                    <div class="properties">
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="role-text">
+
+                    <p class="summary">Provide oversight and management of all adventure recreation programs, including adventure trips, waterfront activities, and climbing wall operations. Departmental lead for risk management focusing on health and safety.</p>
+                    <ul class="accomplishments">
+                        <li></li>
+
+                    </ul>
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="role-box">
+                <div class="role">
+                    <div class="logo-box">
+                        <img src="/media/partner-logos/Greater Tampa Bay Area Council_Stack_4C.jpg" alt="">
                     </div>
                     <div class="position">
 
@@ -90,7 +200,7 @@ include $header;
             <div class="role-box">
                 <div class="role">
                     <div class="logo-box">
-                        <img src="media/partner-logos/threefirescouncil_logo.png" alt="">
+                        <img src="/media/partner-logos/threefirescouncil_logo.png" alt="">
                     </div>
                     <div class="position">
 
@@ -142,7 +252,7 @@ include $header;
             <div class="role-box">
                 <div class="role">
                     <div class="logo-box">
-                        <img src="media/partner-logos/threefirescouncil_logo.png" alt="">
+                        <img src="/media/partner-logos/threefirescouncil_logo.png" alt="">
                     </div>
                     <div class="position">
 
@@ -189,7 +299,7 @@ include $header;
             <div class="role-box">
                 <div class="role">
                     <div class="logo-box">
-                        <img src="media/partner-logos/logo-northern-tier-high-adventure.png" alt="Northern Tier High Adventure, BSA logo">
+                        <img src="/media/partner-logos/logo-northern-tier-high-adventure.png" alt="Northern Tier High Adventure, BSA logo">
                     </div>
                     <div class="position">
 
@@ -235,7 +345,7 @@ include $header;
             <div class="role-box">
                 <div class="role">
                     <div class="logo-box">
-                        <img src="media/partner-logos/Lincoln_Heritage_Stack_4C.jpg" alt="Lincoln Heritage Council, BSA logo">
+                        <img src="/media/partner-logos/Lincoln_Heritage_Stack_4C.jpg" alt="Lincoln Heritage Council, BSA logo">
                     </div>
                     <div class="position">
 
@@ -283,7 +393,7 @@ include $header;
             <div class="role-box">
                 <div class="role">
                     <div class="logo-box">
-                        <img src="media/partner-logos/Lincoln_Heritage_Stack_4C.jpg" alt="Lincoln Heritage Council, BSA logo">
+                        <img src="/media/partner-logos/Lincoln_Heritage_Stack_4C.jpg" alt="Lincoln Heritage Council, BSA logo">
                     </div>
                     <div class="position">
 
@@ -335,11 +445,7 @@ include $header;
         </section>
 
     </main>
-
-    <?php
-    include($footer_path);
-    ?>
-
+    <div id="footer-include"></div>
 </body>
 
 
@@ -358,5 +464,68 @@ include $header;
                 content.style.display = "block";
             }
         });
+    }
+
+  
+   
+    </script>
+
+<script>
+    // Load header
+    fetch("assets/header.html")
+        .then(response => {
+            if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+            return response.text();
+        })
+        .then(data => {
+            const headerTarget = document.getElementById("header-include");
+            if (headerTarget) headerTarget.innerHTML = data;
+        })
+        .catch(error => {
+            console.error("Error loading header:", error);
+        });
+
+    // Load navigation
+    fetch("assets/navigation.html")
+        .then(response => {
+            if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+            return response.text();
+        })
+        .then(data => {
+            const navTarget = document.getElementById("navigation-include");
+            if (navTarget) navTarget.innerHTML = data;
+        })
+        .catch(error => {
+            console.error("Error loading navigation:", error);
+        });
+
+    // Load footer (optional - uncomment if you want footer.html)
+    
+    fetch("/assets/footer.html")
+        .then(response => {
+            if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+            return response.text();
+        })
+        .then(data => {
+            const footerTarget = document.getElementById("footer-include");
+            if (footerTarget) footerTarget.innerHTML = data;
+        })
+        .catch(error => {
+            console.error("Error loading footer:", error);
+        });
+</script>
+
+<script>
+    function menutoggle() {
+        let check = document.getElementById("menubtn");
+        let nav = document.getElementById("nav-container");
+
+        if (check.checked) {
+            nav.style.display = "flex";
+            nav.style.visibility = "visible";
+        } else {
+            nav.style.display = "none";
+            nav.style.visibility = "hidden";
+        }
     }
 </script>

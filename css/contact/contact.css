@@ -7,15 +7,16 @@
     background-image: url('media/photos/img_cover3.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 80%;
+    min-height: 60%;
     min-height: -webkit-calc(100% - 172px);
     min-height: -moz-calc(100% - 172px);
     min-height: calc(100% - 172px);
 }
 
 .contact-box {
+    box-sizing: border-box;
     width: 30rem;
-    height: 35rem;
+    height: 20rem;
     background-color: var(--white);
     font-family: 'Open Sans', sans-serif;
     border-radius: 1rem;
@@ -32,11 +33,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
 }
 
 .contact-item{
     text-align: center;
     display: inline-flex;
+    padding-top: .5rem;
     
 }
 

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Page Specific Title and Description Information for SEO-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hire Alex Klausing in 2024! | Nonprofit | Outdoor Recreation</title>
+    <meta name="description" content="A professional portfolio of Alex Klausing, nonprofit, camping, and outdoor recreation programs professional with ten years of experience.">
+
+    <link rel="stylesheet" href="css/resume/resume.css" type="text/css">
+</head>
+<body>
+
+    <!-- Dynamic includes for header and navigation -->
+    <div id="header-include"></div>
+    <div id="navigation-include"></div>
+
+    <div class="download-containter">
+        <div class="download-btn">
+            <a href="media/documents/Alex%20Klausing%20Resume.pdf" download>Download Resume</a>
+        </div>
+    </div>
+
+    <div class="pdf">
+        <iframe src="media/documents/Alex%20Klausing%20Resume.pdf" frameborder="0" height="800px" allowfullscreen="true" marginheight="300px"></iframe>
+    </div>
+
+    <div id="footer-include"></div>
+
+    <!-- Dynamic include script -->
+    <script>
+        // Load header
+        fetch("/assets/header.html")
+            .then(response => {
+                if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+                return response.text();
+            })
+            .then(data => {
+                const headerTarget = document.getElementById("header-include");
+                if (headerTarget) headerTarget.innerHTML = data;
+            })
+            .catch(error => {
+                console.error("Error loading header:", error);
+            });
+
+        // Load navigation
+        fetch("/assets/navigation2.html")
+            .then(response => {
+                if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+                return response.text();
+            })
+            .then(data => {
+                const navTarget = document.getElementById("navigation-include");
+                if (navTarget) navTarget.innerHTML = data;
+            })
+            .catch(error => {
+                console.error("Error loading navigation:", error);
+            });
+
+        // Load footer (optional)
+        fetch("/assets/footer.html")
+            .then(response => {
+                if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+                return response.text();
+            })
+            .then(data => {
+                const footerTarget = document.getElementById("footer-include");
+                if (footerTarget) footerTarget.innerHTML = data;
+            })
+            .catch(error => {
+                console.error("Error loading footer:", error);
+            });
+    </script>
+</body>
+</html>

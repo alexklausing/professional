@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <!--Page Specific Title and Description Information for SEO-->
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Hire Alex Klausing | Nonprofit | Outdoor Recreation</title>
+     <meta name="description" content="A professional portfolio of Alex Klausing, nonprofit, camping, and outdoor recreation programs professional with ten years of experience.">
+ 
+     <!-- main page head -->
+    <link rel="stylesheet" href="/css/global.css" type="text/css">
+    <link rel="stylesheet" href="/css/contact/contact.css" type="text/css">
+    <link rel="stylesheet" href="/css/navigation.css" type="text/css">
+    <link rel="stylesheet" href="/css/footer.css" type="text/css">
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('/assets/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-include').innerHTML = data;
+                })
+                .catch(error => console.error('Error fetching header:', error));
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <!--Header and Navigation Includes-->
+    <div id="header-include"></div>
+    <div id="navigation-include"></div>
+
+
+    <div class="contact-container">
+        <div class="contact-box">
+            <div id="name" style="padding-bottom: .5rem;">
+                <p>Alex Klausing</p>
+            </div>
+            <div class="contact-box-sub">
+
+                <div class="contact-item" id="phone">
+                    <img src="/media/icons/baseline_call_black_18dp.png" alt="">
+                    <p>Cell: </p><a class="phone" href="tel:+1 502-930-2694"> 502-930-2694</a>
+                </div>
+
+                <div class="contact-item" id="email">
+                    <img src="/media/icons/baseline_email_black_18dp.png" alt="">
+                    <a href="mailto:alex.klausing@outlook.com">alex.klausing@icloud.com</a>
+                </div>
+
+                <div class="contact-item" id="linkedin">
+                    <a class="contact-box-linkedin" href="https://www.linkedin.com/in/alexklausing/">
+                        <img src="/media/icons/LI-In-Bug.png" alt="LinkedIn Logo">
+                        <p>/alexklausing</p>
+                    </a>
+                </div>
+
+                <div class="contact-item" id="address">
+                    <address>Lakeland, Florida USA</address>
+                </div>
+                <!--<a href="pages/contact/relocate.php" class="relocate-link">
+                <div class="relocate">
+                    <p>Yes I'm willing to relocate! <br><span>Learn More</span></p>
+                </div>
+            </a>-->
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <div id="footer-include"></div>
+
+   
+</body>
+
+<script>
+    // Load header
+    fetch("/assets/header.html")
+        .then(response => {
+            if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+            return response.text();
+        })
+        .then(data => {
+            const headerTarget = document.getElementById("header-include");
+            if (headerTarget) headerTarget.innerHTML = data;
+        })
+        .catch(error => {
+            console.error("Error loading header:", error);
+        });
+
+    // Load navigation
+    fetch("/assets/navigation.html")
+        .then(response => {
+            if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+            return response.text();
+        })
+        .then(data => {
+            const navTarget = document.getElementById("navigation-include");
+            if (navTarget) navTarget.innerHTML = data;
+        })
+        .catch(error => {
+            console.error("Error loading navigation:", error);
+        });
+
+    // Load footer (optional - uncomment if you want footer.html)
+    
+    fetch("/assets/footer.html")
+        .then(response => {
+            if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+            return response.text();
+        })
+        .then(data => {
+            const footerTarget = document.getElementById("footer-include");
+            if (footerTarget) footerTarget.innerHTML = data;
+        })
+        .catch(error => {
+            console.error("Error loading footer:", error);
+        });
+</script>
