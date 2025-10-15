@@ -301,7 +301,7 @@
 
     <div id="footer-include"></div>
 
-    <script>
+    <!-- <script>
         document.addEventListener('DOMContentLoaded', () => {
             
             // Reusable function to fetch and inject HTML components
@@ -367,7 +367,47 @@ const components = [
                     console.error('Error loading one or more page components:', error);
                 });
         });
-    </script>
+    </script> -->
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        
+        // --- Setup Accordion Buttons Immediately ---
+        // This code runs as soon as the main page HTML is ready.
+        const accordions = document.querySelectorAll('.company');
+        accordions.forEach(button => {
+            button.addEventListener('click', () => {
+                button.classList.toggle('active');
+                const content = button.nextElementSibling;
+
+                // Use maxHeight for a smooth CSS transition
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                }
+            });
+        });
+
+        // --- Load External Components ---
+        // This happens in the background and doesn't block the accordion setup.
+        const loadComponent = (url, targetId) => {
+            fetch(url)
+                .then(response => response.ok ? response.text() : Promise.reject(`Failed to load ${url}`))
+                .then(html => {
+                    const target = document.getElementById(targetId);
+                    if (target) target.innerHTML = html;
+                })
+                .catch(error => console.error(error));
+        };
+
+        loadComponent('../../assets/navigation.html', 'navigation-include');
+        loadComponent('../../assets/footer.html', 'footer-include');
+
+        // Note: The hamburger menu script should be inside your navigation.html
+        // file, as that's where the menu button and nav container are loaded.
+    });
+</script>
 
 </body>
 </html>
