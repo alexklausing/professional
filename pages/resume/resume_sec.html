@@ -371,26 +371,38 @@ const components = [
 
     <script>
     document.addEventListener('DOMContentLoaded', () => {
-        
-        // --- Setup Accordion Buttons Immediately ---
-        // This code runs as soon as the main page HTML is ready.
-        const accordions = document.querySelectorAll('.company');
-        accordions.forEach(button => {
-            button.addEventListener('click', () => {
-                button.classList.toggle('active');
-                const content = button.nextElementSibling;
+        console.log("Page loaded. Script is running.");
 
-                // Use maxHeight for a smooth CSS transition
-                if (content.style.maxHeight) {
-                    content.style.maxHeight = null;
-                } else {
-                    content.style.maxHeight = content.scrollHeight + 'px';
-                }
+        // --- Setup Accordion Buttons ---
+        const accordions = document.querySelectorAll('.company');
+        console.log("Found buttons:", accordions); // CHECKPOINT 1: See if we found the buttons
+
+        if (accordions.length > 0) {
+            accordions.forEach(button => {
+                button.addEventListener('click', () => {
+                    console.log("Button clicked:", button.innerText); // CHECKPOINT 2: See if clicks are registered
+
+                    button.classList.toggle('active');
+                    const content = button.nextElementSibling;
+
+                    if (content && content.classList.contains('content')) {
+                        if (content.style.maxHeight) {
+                            content.style.maxHeight = null;
+                            console.log("Collapsing content.");
+                        } else {
+                            content.style.maxHeight = content.scrollHeight + "px";
+                            console.log("Expanding content to " + content.scrollHeight + "px.");
+                        }
+                    } else {
+                        console.error("Error: Could not find the '.content' div immediately after the button.", button);
+                    }
+                });
             });
-        });
+        } else {
+            console.warn("Warning: No elements with the class 'company' were found on the page.");
+        }
 
         // --- Load External Components ---
-        // This happens in the background and doesn't block the accordion setup.
         const loadComponent = (url, targetId) => {
             fetch(url)
                 .then(response => response.ok ? response.text() : Promise.reject(`Failed to load ${url}`))
@@ -403,9 +415,6 @@ const components = [
 
         loadComponent('../../assets/navigation.html', 'navigation-include');
         loadComponent('../../assets/footer.html', 'footer-include');
-
-        // Note: The hamburger menu script should be inside your navigation.html
-        // file, as that's where the menu button and nav container are loaded.
     });
 </script>
 
