@@ -16,3 +16,8 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 - [x] **Track: Revise About page UI/UX based on the professional polish established on the homepage**
   *Link: [./tracks/about_ui_ux_revamp_20260320/](./tracks/about_ui_ux_revamp_20260320/)*
+
+---
+
+- [ ] **Track: Revise the sectional resume page to align with project design style and improve UI/UX.**
+*Link: [./tracks/sectional_resume_revamp_20260320/](./tracks/sectional_resume_revamp_20260320/)*
