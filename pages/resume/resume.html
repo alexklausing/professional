@@ -1,75 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!--Page Specific Title and Description Information for SEO-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hire Alex Klausing in 2024! | Nonprofit | Outdoor Recreation</title>
-    <meta name="description" content="A professional portfolio of Alex Klausing, nonprofit, camping, and outdoor recreation programs professional with ten years of experience.">
-
-    <link rel="stylesheet" href="css/resume/resume.css" type="text/css">
+    <title>Resume | Alex Klausing</title>
+    <meta name="description" content="View and download the professional resume of Alex Klausing.">
+    <meta name="author" content="Alex Klausing">
+    <link href="../../dist/output.css" rel="stylesheet">
 </head>
-<body>
+<body class="flex flex-col min-h-screen font-sans text-text_grey text-base md:text-[18px] leading-relaxed tracking-body">
 
-    <!-- Dynamic includes for header and navigation -->
-    <div id="header-include"></div>
-    <div id="navigation-include"></div>
+    <header id="nav-placeholder" class="min-h-[60px] xl:min-h-0"></header>
 
-    <div class="download-containter">
-        <div class="download-btn">
-            <a href="media/documents/Alex%20Klausing%20Resume.pdf" download>Download Resume</a>
+    <header class="relative flex justify-center items-center w-full h-[30vh] md:h-[20em] bg-cover bg-center bg-no-repeat" style="background-image: url('../../media/photos/paddles.jpg');">
+        <div class="download-btn w-auto px-6 sm:px-0 sm:w-80 h-16 bg-coral flex items-center justify-center cursor-pointer shadow-md rounded-lg border-2 border-transparent hover:bg-[#FF8B61] hover:border-darkblue group transition duration-300 ease-in-out">
+            <a class="text-white text-lg sm:text-xl font-bold font-montserrat no-underline group-hover:text-darkblue transition-colors duration-300" href="/media/documents/Alex Klausing Resume.pdf" download>Download Resume</a>
         </div>
-    </div>
+    </header>
 
-    <div class="pdf">
-        <iframe src="media/documents/Alex%20Klausing%20Resume.pdf" frameborder="0" height="800px" allowfullscreen="true" marginheight="300px"></iframe>
-    </div>
+    <main class="flex-grow w-full max-w-7xl mx-auto px-0 sm:px-6 lg:px-8 py-8 md:py-12">
+        <div class="pdf-container w-full aspect-video md:aspect-[4/3] lg:aspect-[3/2] shadow-lg rounded-md overflow-hidden border border-gray-200">
+             <iframe src="../../media/documents/Alex Klausing Resume.pdf" class="w-full h-full border-none" title="Alex Klausing Resume PDF"></iframe>
+            </div>
+    </main>
 
-    <div id="footer-include"></div>
+    <footer id="footer-placeholder"></footer>
 
-    <!-- Dynamic include script -->
-    <script>
-        // Load header
-        fetch("/assets/header.html")
-            .then(response => {
-                if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
-                return response.text();
-            })
-            .then(data => {
-                const headerTarget = document.getElementById("header-include");
-                if (headerTarget) headerTarget.innerHTML = data;
-            })
-            .catch(error => {
-                console.error("Error loading header:", error);
-            });
+    <script src="../../js/includes.js"></script>
+    <script src="../../js/navigation.js"></script>
 
-        // Load navigation
-        fetch("/assets/navigation2.html")
-            .then(response => {
-                if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
-                return response.text();
-            })
-            .then(data => {
-                const navTarget = document.getElementById("navigation-include");
-                if (navTarget) navTarget.innerHTML = data;
-            })
-            .catch(error => {
-                console.error("Error loading navigation:", error);
-            });
-
-        // Load footer (optional)
-        fetch("/assets/footer.html")
-            .then(response => {
-                if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
-                return response.text();
-            })
-            .then(data => {
-                const footerTarget = document.getElementById("footer-include");
-                if (footerTarget) footerTarget.innerHTML = data;
-            })
-            .catch(error => {
-                console.error("Error loading footer:", error);
-            });
-    </script>
 </body>
 </html>

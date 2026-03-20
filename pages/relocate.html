@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relocation Preferences | Alex Klausing</title>
+    <meta name="description" content="Geographic areas of interest for professional relocation for Alex Klausing.">
+    <meta name="author" content="Alex Klausing">
+    <link href="../dist/output.css" rel="stylesheet">
+</head>
+<body class="flex flex-col min-h-screen font-sans text-text_grey text-base md:text-[18px] leading-relaxed tracking-body bg-sky_white">
+
+    <header id="nav-placeholder" class="min-h-[60px] xl:min-h-0"></header>
+
+    <header class="relative flex justify-center items-center w-full h-[50vh] bg-cover bg-center bg-no-repeat" style="background-image: url('../../media/photos/cover_canoe.jpeg');">
+        <div class="bg-black/30 p-4 rounded"> {/* Added subtle background for text readability */}
+            <h1 class="font-montserrat text-white text-4xl sm:text-5xl font-medium leading-tight text-center">Relocation Preference</h1>
+        </div>
+    </header>
+
+    <main class="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+
+        <section class="mb-12 md:mb-16">
+            <div class="explanation bg-white text-center p-6 md:p-8 border-4 md:border-[0.7rem] border-darkblue rounded-[2rem] md:rounded-[4rem] shadow-md max-w-4xl mx-auto">
+                 <p class="text-base md:text-lg leading-relaxed">I am most concerned about finding an excellent place to raise a family. For me, that means being in a community that offers an exceptional quality of life. Our top priorities are availability and quality of childcare, schools, and the community's safety. I am open to considering all opportunities; however, the geographic areas I am most interested in are listed below.</p>
+            </div>
+        </section>
+
+        <section class="mb-12 md:mb-16">
+            <div class="text-center mb-8">
+                <h2 class="font-montserrat text-3xl md:text-4xl font-semibold text-darkblue">States</h2>
+            </div>
+            {/* Grid for States */}
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 justify-items-center">
+                {/* State Box (Repeat for each state) */}
+                <div class="state-box w-40 h-40 md:w-48 md:h-48 bg-midblue rounded-2xl flex flex-col justify-center items-center p-4 relative shadow-lg transform transition duration-300 hover:scale-105">
+                    <img src="/media/icons/florida-silhouette.png" alt="Florida Silhouette" class="h-12 md:h-16 w-auto mb-2 filter brightness-0 invert"> {/* Adjusted size/margin */}
+                    <p class="font-semibold text-white text-lg md:text-xl text-center absolute bottom-4">Florida</p> {/* Positioned text */}
+                </div>
+                <div class="state-box w-40 h-40 md:w-48 md:h-48 bg-midblue rounded-2xl flex flex-col justify-center items-center p-4 relative shadow-lg transform transition duration-300 hover:scale-105">
+                    <img src="/media/icons/kentucky-silhouette.png" alt="Kentucky Silhouette" class="h-12 md:h-16 w-auto mb-2 filter brightness-0 invert">
+                    <p class="font-semibold text-white text-lg md:text-xl text-center absolute bottom-4">Kentucky</p>
+                </div>
+                 <div class="state-box w-40 h-40 md:w-48 md:h-48 bg-midblue rounded-2xl flex flex-col justify-center items-center p-4 relative shadow-lg transform transition duration-300 hover:scale-105">
+                    <img src="/media/icons/north-carolina-silhouette.png" alt="North Carolina Silhouette" class="h-12 md:h-16 w-auto mb-2 filter brightness-0 invert">
+                    <p class="font-semibold text-white text-lg md:text-xl text-center absolute bottom-4">North Carolina</p>
+                </div>
+                 <div class="state-box w-40 h-40 md:w-48 md:h-48 bg-midblue rounded-2xl flex flex-col justify-center items-center p-4 relative shadow-lg transform transition duration-300 hover:scale-105">
+                    <img src="/media/icons/virginia-silhouette.png" alt="Virginia Silhouette" class="h-12 md:h-16 w-auto mb-2 filter brightness-0 invert">
+                    <p class="font-semibold text-white text-lg md:text-xl text-center absolute bottom-4">Virginia</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16 md:mb-24"> {/* Increased bottom margin */}
+            <div class="text-center mb-8">
+                <h2 class="font-montserrat text-3xl md:text-4xl font-semibold text-darkblue">Regions</h2>
+            </div>
+             {/* Flexbox for Regions (Can also use Grid) */}
+            <div class="flex flex-wrap justify-center gap-6 md:gap-8">
+                 {/* Region Box (Repeat for each region) */}
+                <div class="region-box w-full sm:w-80 md:w-96 bg-forest_green rounded-2xl flex justify-center items-center p-6 h-24 shadow-lg transform transition duration-300 hover:scale-105"> {/* Adjusted size/padding */}
+                    <p class="font-semibold text-white text-lg md:text-xl text-center">Rocky Mountain Area</p>
+                </div>
+                <div class="region-box w-full sm:w-80 md:w-96 bg-forest_green rounded-2xl flex justify-center items-center p-6 h-24 shadow-lg transform transition duration-300 hover:scale-105">
+                    <p class="font-semibold text-white text-lg md:text-xl text-center">Blue Ridge Mountain Area</p>
+                </div>
+                <div class="region-box w-full sm:w-80 md:w-96 bg-forest_green rounded-2xl flex justify-center items-center p-6 h-24 shadow-lg transform transition duration-300 hover:scale-105">
+                    <p class="font-semibold text-white text-lg md:text-xl text-center">Along the Appalachian Trail</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="footer-placeholder"></footer>
+
+    <script src="../js/includes.js"></script>
+    <script src="../js/navigation.js"></script>
+
+</body>
+</html>

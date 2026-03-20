@@ -1,134 +1,45 @@
-<!-- <body>
-    <nav>
-        <div class="nav-container" id="nav-container">
-            <div class="nav-flex">
-                <a id="logo-box-link" href="index.html">
-                    <div id="logo-box">
-                        <img class="hiker" src="/media/brandkit/hiking_silhouette.png" alt="hiker">
-                        <img class="hiker coral" src="/media/brandkit/logo_coral.png" alt="hiker">
-                        <p class="logo-text">Alex<br><span>Klausing</span></p>
-                    </div>
-                </a>
-            </div>
-            <div class="nav-flex nav-links">
-                <ul>
-                 <li><a href="#home">Home</a></li> -->
-                    <!-- <li class="dropdown">
-                        <a href="/pages/resume/resume_sec.html">Resume</a>
-                        <div class="dropdown-container">
-                            <ul class="dropdown-content">
-                                <li><a href="/pages/resume/resume_sec.html">Online Resume</a></li>
-                                <li><a href="/media/documents/Alex Klausing Resume.pdf">Download PDF Version</a></li>
-                            </ul>
-                        </div>
-                    </li> -->
-                    <!-- <li class="dropdown">
-                        <a href="#about">Consulting Services</a>
-                        <div class="dropdown-container">
-                            <ul class="dropdown-content">
-                                <li><a href="#team">Fundraising</a></li>
-                                <li><a href="#team">Summer Camp Administration</a>
-                                    <div class="dropdown-container">
-                                        <ul class="dropdown-content">
-                                            <li><a href="#team">Purchasing Services</a></li>
-                                            <li><a href="#team">Staff Training</a></li>
-                                            <li><a href="#contact">Program Design</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li><a href="#contact">Nonprofit Leadership</a></li>
-                            </ul>
-                        </div>
-                    </li> -->
-                    <!-- <li class="dropdown">
-                        <a href="pages/about/about.html">About Me</a>
-                        <div class="dropdown-container">
-                            <ul class="dropdown-content">
-                                <li><a href="pages/about/about.html">About Me</a></li>
-                                <li><a href="pages/contact/contact.html">Contact</a></li>
-                            </ul>
-                        </div>
-                    </li> -->
-                <!-- </ul>
-            </div>
-            <div class="nav-flex nav-contact">
-                <li><a class="" href="pages/contact/contact.html">Contact</a></li>
-            </div>
+<nav class="fixed w-full z-10 bg-darkblue flex justify-between items-center px-4 md:px-20 py-2 min-h-[60px] xl:min-h-0">
+    <a id="logo-box-link" href="/index.html" class="group inline-flex items-center text-white no-underline text-2xl flex-grow xl:flex-grow-0 mr-auto xl:mr-0">
+        <div id="logo-box" class="flex justify-start items-center cursor-pointer relative py-1">
+             <img class="hiker h-12 w-auto filter brightness-0 invert mr-1.5 transition-opacity duration-300 opacity-100 group-hover:opacity-0" src="/media/brandkit/hiking_silhouette.png" alt="hiker icon">
+             <img class="hiker coral h-12 w-auto absolute top-1/2 left-0 transform -translate-y-1/2 mr-1.5 transition-opacity duration-300 opacity-0 group-hover:opacity-100" src="/media/brandkit/logo_coral.png" alt="hiker icon in coral">
+            <p class="logo-text font-roboto font-light text-xl tracking-[.4rem] text-left ml-4 text-white group-hover:text-coral flex flex-col justify-center h-full transition-colors duration-300">
+                Alex<br>
+                <span class="font-medium text-lg xl:text-2xl tracking-[.05rem]">Klausing</span>
+            </p>
         </div>
+    </a>
 
-        <div class="hamburger">
-            <input type="checkbox" class="menubtn" id="menubtn" onclick="menutoggle()">
-            <div class="line bar1"></div>
-            <div class="line bar2"></div>
-            <div class="line bar3"></div>
-        </div>
-    </nav> -->
-
-    <script> /*
-        function menutoggle() {
-            let check = document.getElementById("menubtn");
-            let nav = document.getElementById("nav-container");
-
-            if (check.checked == true) {
-                nav.style.display = "flex";
-                nav.style.visibility = "visible";
-            } else {
-                nav.style.display = "none";
-                nav.style.visibility = "hidden";
-            }
-        } */
-    </script> 
-</body> 
-
-
-<nav>
-    <div class="nav-container" id="nav-container">
-        <div class="nav-flex">
-            <a id="logo-box-link" href="index.html">
-                <div id="logo-box">
-                    <img class="hiker" src="/media/brandkit/hiking_silhouette.png" alt="hiker">
-                    <img class="hiker coral" src="/media/brandkit/logo_coral.png" alt="hiker">
-                    <p class="logo-text">Alex<br><span>Klausing</span></p>
-                </div>
-            </a>
-        </div>
-        <div class="nav-flex nav-links">
-            <ul>
-                <li class="dropdown">
-                    <a href="/pages/resume/resume_sec.html">Resume</a>
-                    <div class="dropdown-container">
-                        <ul class="dropdown-content">
-                            <li><a href="/pages/resume/resume_sec.html">Online Resume</a></li>
-                            <li><a href="/media/documents/Alex Klausing Resume.pdf">Download PDF Version</a></li>
+    <div class="nav-container hidden xl:flex justify-between items-center w-full" id="nav-container">
+       <div class="nav-links flex-grow flex justify-center w-full xl:w-auto order-1 xl:order-none mb-4 xl:mb-0">
+            <ul class="flex flex-col xl:flex-row justify-center items-center list-none p-0 m-0 w-full">
+                 <li class="dropdown relative group mx-6 my-2 xl:my-0 w-[90%] xl:w-auto text-center">
+                    <a href="/pages/resume/resume_sec.html" class="font-roboto text-white text-xl xl:text-2xl tracking-wider no-underline inline-block transition-transform duration-300 ease-in-out hover:text-coral hover:font-semibold hover:scale-105">Resume</a>
+                     <div class="dropdown-content hidden group-hover:block xl:absolute min-w-max z-10 bg-gradient-to-t from-sky_white to-sky_white/85 rounded-b-lg xl:shadow-lg py-2 top-full left-1/2 transform xl:-translate-x-1/2 mt-1 w-full xl:w-auto">
+                        <ul class="list-none p-0 m-0">
+                            <li><a href="/pages/about.html" class="block text-dark_blue whitespace-nowrap px-5 py-2 no-underline transition-colors duration-200 hover:bg-coral hover:text-white text-lg xl:text-base">About</a></li>
+                            <li><a href="/pages/relocate.html" class="block text-dark_blue whitespace-nowrap px-5 py-2 no-underline transition-colors duration-200 hover:bg-coral hover:text-white text-lg xl:text-base">Relocation</a></li>
+                            <li><a href="/pages/references.html" class="block text-dark_blue whitespace-nowrap px-5 py-2 no-underline transition-colors duration-200 hover:bg-coral hover:text-white text-lg xl:text-base">References</a></li>
+                            <li><a href="/pages/fundraising.html" class="block text-dark_blue whitespace-nowrap px-5 py-2 no-underline transition-colors duration-200 hover:bg-coral hover:text-white text-lg xl:text-base">Consulting Services</a></li>
+                            <li><a href="/pages/resume/resume_sec.html" class="block text-dark_blue whitespace-nowrap px-5 py-2 no-underline transition-colors duration-200 hover:bg-coral hover:text-white text-lg xl:text-base">Online Resume</a></li>
+                            <li><a href="/pages/resume/resume.html" class="block text-dark_blue whitespace-nowrap px-5 py-2 no-underline transition-colors duration-200 hover:bg-coral hover:text-white text-lg xl:text-base">Resume</a></li>
+                            <li><a href="/media/documents/Alex Klausing Resume.pdf" download class="block text-dark_blue whitespace-nowrap px-5 py-2 no-underline transition-colors duration-200 hover:bg-coral hover:text-white text-lg xl:text-base">Download PDF Version</a></li>
                         </ul>
                     </div>
                 </li>
-            </ul>
+                 </ul>
         </div>
-        <div class="nav-flex nav-contact">
-            <li><a href="/pages/contact/contact.html">Contact</a></li>
+         <div class="nav-contact ml-auto w-full xl:w-auto flex justify-center xl:justify-end order-2 xl:order-none mb-4 xl:mb-0">
+            <li class="list-none w-[90%] sm:w-auto">
+                 <a href="/pages/contact.html" class="flex items-center justify-center h-10 bg-white border-[0.3rem] border-coral rounded-2xl px-4 uppercase transition-colors duration-200 ease-in-out hover:bg-darkblue hover:border-white text-coral hover:text-white text-lg tracking-[.15rem] no-underline whitespace-nowrap font-bold">Contact</a>
+            </li>
         </div>
     </div>
 
-    <div class="hamburger">
-        <input type="checkbox" class="menubtn" id="menubtn" onclick="menutoggle()">
-        <div class="line bar1"></div>
-        <div class="line bar2"></div>
-        <div class="line bar3"></div>
+    <div class="hamburger xl:hidden relative w-10 h-10 cursor-pointer z-[11]">
+        <input type="checkbox" class="absolute w-full h-full opacity-0 cursor-pointer z-[2]" id="menubtn">
+        <div class="line bar1 absolute left-0 w-full h-[0.3rem] bg-white rounded transition-all duration-300 ease-in-out origin-center top-[15%]"></div>
+        <div class="line bar2 absolute left-0 w-full h-[0.3rem] bg-white rounded transition-all duration-300 ease-in-out origin-center top-1/2 transform -translate-y-1/2 opacity-100"></div>
+        <div class="line bar3 absolute left-0 w-full h-[0.3rem] bg-white rounded transition-all duration-300 ease-in-out origin-center top-auto bottom-[15%]"></div>
     </div>
 </nav>
-
-<script>
-    function menutoggle() {
-        let check = document.getElementById("menubtn");
-        let nav = document.getElementById("nav-container");
-
-        if (check.checked) {
-            nav.style.display = "flex";
-            nav.style.visibility = "visible";
-        } else {
-            nav.style.display = "none";
-            nav.style.visibility = "hidden";
-        }
-    }
-</script>

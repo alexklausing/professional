@@ -1,0 +1,62 @@
+/* professional/src/input.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* You can add custom CSS below these directives if needed */
+
+/* Mobile Navigation Transitions */
+#nav-container.mobile-nav-active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%; /* Position below the nav bar */
+  left: 0;
+  width: 100%;
+  background-color: #003A66; /* darkblue */
+  padding: 1rem 0;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  align-items: center;
+  max-height: calc(100vh - 60px); /* Adjust 60px if nav height changes */
+  overflow-y: auto;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  visibility: visible;
+}
+ #nav-container { /* Default hidden state for transition */
+   opacity: 0;
+   transform: translateY(-10px);
+   transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s;
+   visibility: hidden;
+ }
+ .xl\:flex#nav-container { /* Reset transitions for desktop */
+    opacity: 1;
+    transform: none;
+    transition: none;
+    visibility: visible;
+ }
+ /* Ensure hamburger lines transition smoothly */
+ .hamburger .line { transition: transform 0.3s ease, opacity 0.3s ease; }
+
+/* Accordion Transitions */
+.content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out; /* Smooth transition */
+    background-color: #f1f1f1; /* --backgroundgrey */
+}
+/* Style for the active button state '+' sign rotation */
+.company.active span {
+     transform: rotate(45deg);
+}
+/* Style to remove bottom radius when open for seamless look */
+ .company.active {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+ }
+ /* Ensure content below active button has no top radius */
+ .company.active + .content > div {
+     border-top-left-radius: 0;
+     border-top-right-radius: 0;
+ }
