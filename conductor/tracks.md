@@ -19,5 +19,5 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 ---
 
-- [ ] **Track: Revise the sectional resume page to align with project design style and improve UI/UX.**
+- [x] **Track: Revise the sectional resume page to align with project design style and improve UI/UX.**
 *Link: [./tracks/sectional_resume_revamp_20260320/](./tracks/sectional_resume_revamp_20260320/)*
