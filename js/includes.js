@@ -5,6 +5,27 @@
  */
 const ConductorIncludes = (() => {
     let includesPromise = null;
+    let detectedBasePath = '/';
+
+    function fixPaths(element, basePath) {
+        if (basePath === '/') return; // No need to fix if at root
+
+        // Fix images, scripts, etc.
+        const pathAttrs = ['src', 'href'];
+        pathAttrs.forEach(attr => {
+            element.querySelectorAll(`[${attr}^="/"]`).forEach(el => {
+                const val = el.getAttribute(attr);
+                // Only fix if it starts with / and not // (external)
+                if (val.startsWith('/') && !val.startsWith('//')) {
+                    // Check if it's a project path (starts with /media, /pages, /assets, /js, /dist)
+                    if (val.match(/^\/(media|pages|assets|js|dist|index\.html)/)) {
+                        const newVal = basePath + val.substring(1);
+                        el.setAttribute(attr, newVal);
+                    }
+                }
+            });
+        });
+    }
 
     async function loadHtmlInclude(fileUrl, targetId, mode = 'replace') {
         try {
@@ -17,6 +38,10 @@ const ConductorIncludes = (() => {
             if (mode === 'head') {
                 const parser = new DOMParser();
                 const doc = parser.parseFromString(htmlText, 'text/html');
+                
+                // Fix paths in the head content before inserting
+                fixPaths(doc.head, detectedBasePath);
+                
                 const headContent = doc.head.childNodes;
                 const fragment = document.createDocumentFragment();
 
@@ -44,7 +69,13 @@ const ConductorIncludes = (() => {
                 const targetElement = document.getElementById(targetId);
                 if (!targetElement) return;
 
-                const contentToInsert = htmlText;
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = htmlText;
+                
+                // Fix paths in the content
+                fixPaths(tempDiv, detectedBasePath);
+
+                const contentToInsert = tempDiv.innerHTML;
 
                 switch (mode) {
                     case 'append':
@@ -82,9 +113,6 @@ const ConductorIncludes = (() => {
     function run() {
         if (includesPromise) return includesPromise;
 
-        // Detect base path for GitHub Pages subfolder compatibility
-        // If the script is loaded from /js/includes.js, the root is /
-        // If it's loaded from /repo/js/includes.js, the root is /repo/
         const script = document.querySelector('script[src*="js/includes.js"]');
         let basePath = '/';
         if (script) {
@@ -96,17 +124,18 @@ const ConductorIncludes = (() => {
                 basePath = src.replace('js/includes.js', '');
             }
         }
-        // Ensure basePath ends with / and doesn't have duplicate slashes
         basePath = (basePath.startsWith('/') ? '' : '/') + basePath;
         if (!basePath.endsWith('/')) basePath += '/';
         basePath = basePath.replace(/\/+/g, '/');
+        
+        detectedBasePath = basePath;
 
-        console.log(`ConductorIncludes: Using base path: ${basePath}`);
+        console.log(`ConductorIncludes: Using base path: ${detectedBasePath}`);
 
         includesPromise = Promise.all([
-            loadHtmlInclude(`${basePath}assets/head.html`, null, 'head'),
-            loadHtmlInclude(`${basePath}assets/navigation.html`, 'nav-placeholder', 'replace'),
-            loadHtmlInclude(`${basePath}assets/footer.html`, 'footer-placeholder', 'replace')
+            loadHtmlInclude(`${detectedBasePath}assets/head.html`, null, 'head'),
+            loadHtmlInclude(`${detectedBasePath}assets/navigation.html`, 'nav-placeholder', 'replace'),
+            loadHtmlInclude(`${detectedBasePath}assets/footer.html`, 'footer-placeholder', 'replace')
         ]).then(() => {
             // Post-load tasks
             const yearSpan = document.getElementById('copyright-year');
@@ -117,7 +146,7 @@ const ConductorIncludes = (() => {
         return includesPromise;
     }
 
-    return { run };
+    return { run, getBasePath: () => detectedBasePath };
 })();
 
 // Auto-run on load
@@ -129,3 +158,4 @@ if (document.readyState === 'loading') {
 
 // Export for pages that need to wait for it
 window.runIncludes = () => ConductorIncludes.run();
+window.getConductorBasePath = () => ConductorIncludes.getBasePath();
