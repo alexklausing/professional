@@ -8,7 +8,7 @@ To provide a professional online presence for Alex Klausing, serving as a compre
 * **Prospective Clients:** Individuals or organizations seeking specific expertise or services.
 
 ## 3. Primary Goals
-* **Showcase Resume/CV:** Provide a professional, interactive, and easily accessible version of the resume.
+* **Showcase Resume/CV:** Provide a professional, interactive, and easily accessible version of the resume, utilizing modern card-based designs and seamless transitions for a superior user experience.
 * **Enable Easy Contact:** Offer clear and multiple ways for visitors to get in touch.
 
 ## 4. Core Features & Sections

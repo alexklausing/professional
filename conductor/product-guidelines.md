@@ -6,7 +6,7 @@
 * **Accuracy:** Ensure all information, especially in the resume and portfolio, is accurate and up-to-date.
 
 ## 2. Branding & Visual Identity
-* **Consistency:** Maintain a consistent **Modern & Airy** visual identity across all pages, emphasizing generous whitespace, centered layouts for storytelling, and clean typography.
+* **Consistency:** Maintain a consistent **Modern & Airy** visual identity across all pages, emphasizing generous whitespace, centered layouts for storytelling, clean typography, and professional card-based components with subtle interactive feedback.
 * **Imagery:** Use high-quality, professional photographs and graphics that align with the site's professional image.
 * **Logo & Favicon:** Use established brand elements (logo, favicon) consistently.
 
