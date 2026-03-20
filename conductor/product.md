@@ -17,5 +17,5 @@ To provide a professional online presence for Alex Klausing, serving as a compre
 * **Portfolio/Work Examples:** A gallery or list of key projects and accomplishments.
 
 ## 5. Visual Tone & UX
-* **Refined UI/UX:** Maintain and polish the existing professional aesthetic while focusing on optimal user experience and modern design principles.
+* **Refined UI/UX:** Maintain and polish a **Modern & Airy** professional aesthetic while focusing on optimal user experience and modern design principles.
 * **Professional & Trustworthy:** Project an image of competence and reliability.
