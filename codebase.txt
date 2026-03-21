@@ -1,0 +1,1173 @@
+=== Codebase Export | Sat, 29 Nov 2025 15:04:34 GMT ===
+
+=== assets/footer.html ===
+<footer class="mt-auto">
+    <div class="footer-container bg-midblue w-full py-4 flex flex-col justify-center items-center">
+        <div class="copyright text-center m-4">
+            <p class="mt-4 text-white text-sm">
+                &copy; Copyright <span id="copyright-year"></span> Alex Klausing | Website designed and coded by <i>Alex Klausing</i> using HTML, CSS, JavaScript.
+            </p>
+        </div>
+        <div class="footer-contact-info flex flex-row flex-wrap justify-center items-center">
+            <div class="footer-contact-item mb-4 mx-2">
+                <a href="tel:502-930-2694" class="hover:opacity-75 transition-opacity duration-200">
+                    <img src="/media/icons/Contact-256.png" alt="Phone Icon" class="w-8 h-8 filter brightness-0 invert">
+                </a>
+            </div>
+            <div class="footer-contact-item mb-4 mx-2">
+                <a href="mailto:alex.klausing@outlook.com" target="_top" class="hover:opacity-75 transition-opacity duration-200">
+                    <img src="/media/icons/Message-Mail-256.png" alt="Email Icon" class="w-8 h-8 filter brightness-0 invert">
+                </a>
+            </div>
+            <div class="footer-contact-item mb-4 mx-2">
+                <a class="contact-box-linkedin hover:opacity-75 transition-opacity duration-200" href="https://www.linkedin.com/in/alexklausing/">
+                    <img src="/media/icons/LinkedIn-256.png" alt="LinkedIn Logo" class="w-8 h-8 filter brightness-0 invert">
+                </a>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Ensure this runs only after the element exists
+        const yearSpan = document.getElementById('copyright-year');
+        if (yearSpan) {
+            yearSpan.textContent = new Date().getFullYear();
+        } else {
+             // Fallback if script runs before DOM element is fully parsed (less likely here but safe)
+            document.addEventListener('DOMContentLoaded', () => {
+                 const span = document.getElementById('copyright-year');
+                 if(span) span.textContent = new Date().getFullYear();
+            });
+        }
+    </script>
+</footer>
+
+=== assets/head.html ===
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Alex Klausing | Nonprofit | Outdoor Recreation</title>
+    <meta name="description" content="Contact information for Alex Klausing, a nonprofit, camping, and outdoor recreation programs professional.">
+    <meta name="author" content="Alex Klausing">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link href="/dist/output.css" rel="stylesheet">
+</head>
+
+
+=== assets/navigation.html ===
+<nav class="fixed w-full z-10 bg-darkblue flex justify-between items-center px-4 md:px-20 py-2 min-h-[60px] xl:min-h-0">
+    <a id="logo-box-link" href="/index.html" class="group inline-flex items-center text-white no-underline text-2xl flex-grow xl:flex-grow-0 mr-auto xl:mr-0">
+        <div id="logo-box" class="flex justify-start items-center cursor-pointer relative py-1">
+             <img class="hiker h-12 w-auto filter brightness-0 invert mr-1.5 transition-opacity duration-300 opacity-100 group-hover:opacity-0" src="/media/brandkit/hiking_silhouette.png" alt="hiker icon">
+             <img class="hiker coral h-12 w-auto absolute top-1/2 left-0 transform -translate-y-1/2 mr-1.5 transition-opacity duration-300 opacity-0 group-hover:opacity-100" src="/media/brandkit/logo_coral.png" alt="hiker icon in coral">
+            <p class="logo-text font-roboto font-light text-xl tracking-[.4rem] text-left ml-4 text-white group-hover:text-coral flex flex-col justify-center h-full transition-colors duration-300">
+                Alex<br>
+                <span class="font-medium text-lg xl:text-2xl tracking-[.05rem]">Klausing</span>
+            </p>
+        </div>
+    </a>
+
+    <div class="nav-container hidden xl:flex justify-between items-center w-full" id="nav-container">
+       <div class="nav-links flex-grow flex justify-center w-full xl:w-auto order-1 xl:order-none mb-4 xl:mb-0">
+            <ul class="flex flex-col xl:flex-row justify-center items-center list-none p-0 m-0 w-full">
+                 <li class="dropdown relative group mx-6 my-2 xl:my-0 w-[90%] xl:w-auto text-center">
+                    <a href="/pages/resume/resume_sec.html" class="font-roboto text-white text-xl xl:text-2xl tracking-wider no-underline inline-block transition-transform duration-300 ease-in-out hover:text-coral hover:font-semibold hover:scale-105">Resume</a>
+                     <div class="dropdown-content hidden group-hover:block xl:absolute min-w-max z-10 bg-gradient-to-t from-sky_white to-sky_white/85 rounded-b-lg xl:shadow-lg py-2 top-full left-1/2 transform xl:-translate-x-1/2 mt-1 w-full xl:w-auto">
+                        <ul class="list-none p-0 m-0">
+                            <li><a href="/pages/about.html" class="block text-dark_blue whitespace-nowrap px-5 py-2 no-underline transition-colors duration-200 hover:bg-coral hover:text-white text-lg xl:text-base">About</a></li>
+                            <li><a href="/pages/relocate.html" class="block text-dark_blue whitespace-nowrap px-5 py-2 no-underline transition-colors duration-200 hover:bg-coral hover:text-white text-lg xl:text-base">Relocation</a></li>
+                            <li><a href="/pages/references.html" class="block text-dark_blue whitespace-nowrap px-5 py-2 no-underline transition-colors duration-200 hover:bg-coral hover:text-white text-lg xl:text-base">References</a></li>
+                            <li><a href="/pages/fundraising.html" class="block text-dark_blue whitespace-nowrap px-5 py-2 no-underline transition-colors duration-200 hover:bg-coral hover:text-white text-lg xl:text-base">Consulting Services</a></li>
+                            <li><a href="/pages/resume/resume_sec.html" class="block text-dark_blue whitespace-nowrap px-5 py-2 no-underline transition-colors duration-200 hover:bg-coral hover:text-white text-lg xl:text-base">Online Resume</a></li>
+                            <li><a href="/pages/resume/resume.html" class="block text-dark_blue whitespace-nowrap px-5 py-2 no-underline transition-colors duration-200 hover:bg-coral hover:text-white text-lg xl:text-base">Resume</a></li>
+                            <li><a href="/media/documents/Alex Klausing Resume.pdf" download class="block text-dark_blue whitespace-nowrap px-5 py-2 no-underline transition-colors duration-200 hover:bg-coral hover:text-white text-lg xl:text-base">Download PDF Version</a></li>
+                        </ul>
+                    </div>
+                </li>
+                 </ul>
+        </div>
+         <div class="nav-contact ml-auto w-full xl:w-auto flex justify-center xl:justify-end order-2 xl:order-none mb-4 xl:mb-0">
+            <li class="list-none w-[90%] sm:w-auto">
+                 <a href="/pages/contact.html" class="flex items-center justify-center h-10 bg-white border-[0.3rem] border-coral rounded-2xl px-4 uppercase transition-colors duration-200 ease-in-out hover:bg-darkblue hover:border-white text-coral hover:text-white text-lg tracking-[.15rem] no-underline whitespace-nowrap font-bold">Contact</a>
+            </li>
+        </div>
+    </div>
+
+    <div class="hamburger xl:hidden relative w-10 h-10 cursor-pointer z-[11]">
+        <input type="checkbox" class="absolute w-full h-full opacity-0 cursor-pointer z-[2]" id="menubtn">
+        <div class="line bar1 absolute left-0 w-full h-[0.3rem] bg-white rounded transition-all duration-300 ease-in-out origin-center top-[15%]"></div>
+        <div class="line bar2 absolute left-0 w-full h-[0.3rem] bg-white rounded transition-all duration-300 ease-in-out origin-center top-1/2 transform -translate-y-1/2 opacity-100"></div>
+        <div class="line bar3 absolute left-0 w-full h-[0.3rem] bg-white rounded transition-all duration-300 ease-in-out origin-center top-auto bottom-[15%]"></div>
+    </div>
+</nav>
+
+<script>
+    // Encapsulated Hamburger Logic
+    function setupHamburger() {
+        const menuButton = document.getElementById("menubtn");
+        const navContainer = document.getElementById("nav-container");
+        const lines = document.querySelectorAll('.hamburger .line');
+
+        if (!menuButton || !navContainer || lines.length !== 3) {
+            console.error("Hamburger elements not found. Menu won't work.");
+            return; // Exit if elements are missing
+        }
+
+        const applyMobileNavStyles = (show) => {
+            if (show) {
+                navContainer.style.display = 'flex'; // Use style for initial show/hide controlled by JS
+                requestAnimationFrame(() => { // Allow display change to render before transition
+                    navContainer.classList.add('mobile-nav-active'); // Add class for transitions/styles
+                });
+                lines[0].classList.add('rotate-45', 'translate-y-[0.6rem]');
+                lines[1].classList.add('opacity-0', 'translate-x-4');
+                lines[2].classList.add('-rotate-45', '-translate-y-[0.7rem]'); // Adjusted for potentially better centering
+            } else {
+                navContainer.classList.remove('mobile-nav-active');
+                // Use transitionend event to set display none *after* transition
+                navContainer.addEventListener('transitionend', () => {
+                   if (!menuButton.checked) navContainer.style.display = 'none';
+                }, { once: true });
+
+                lines[0].classList.remove('rotate-45', 'translate-y-[0.6rem]');
+                lines[1].classList.remove('opacity-0', 'translate-x-4');
+                lines[2].classList.remove('-rotate-45', '-translate-y-[0.7rem]');
+            }
+        };
+
+        menuButton.addEventListener('change', () => {
+            applyMobileNavStyles(menuButton.checked);
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 1280) { // xl breakpoint
+                navContainer.style.display = ''; // Reset display style
+                navContainer.classList.remove('mobile-nav-active'); // Remove mobile active class
+                menuButton.checked = false; // Uncheck the box
+                 // Reset line classes explicitly on resize to large
+                lines[0].classList.remove('rotate-45', 'translate-y-[0.6rem]');
+                lines[1].classList.remove('opacity-0', 'translate-x-4');
+                lines[2].classList.remove('-rotate-45', '-translate-y-[0.7rem]');
+            } else {
+                // Apply correct state based on checkbox when resizing to small
+                applyMobileNavStyles(menuButton.checked);
+                 // Ensure display is none if unchecked and small
+                if(!menuButton.checked) navContainer.style.display = 'none';
+            }
+        });
+
+        // Initial check on load for small screens
+        if (window.innerWidth < 1280 && !menuButton.checked) {
+            navContainer.style.display = 'none';
+        }
+    }
+
+    // Add CSS for mobile nav transition (can be in input.css or here in <style>)
+    const style = document.createElement('style');
+    style.textContent = `
+      #nav-container.mobile-nav-active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%; /* Position below the nav bar */
+        left: 0;
+        width: 100%;
+        background-color: var(--darkblue); /* Ensure Tailwind variable works or use hex #003A66 */
+        padding: 1rem 0;
+        box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+        align-items: center;
+        max-height: calc(100vh - 60px); /* Adjust 60px if nav height changes */
+        overflow-y: auto;
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        visibility: visible;
+      }
+       #nav-container { /* Default hidden state for transition */
+         opacity: 0;
+         transform: translateY(-10px);
+         transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s;
+         visibility: hidden;
+       }
+       .xl\\:flex#nav-container { /* Reset transitions for desktop */
+          opacity: 1;
+          transform: none;
+          transition: none;
+          visibility: visible;
+       }
+       /* Ensure hamburger lines transition smoothly */
+       .hamburger .line { transition: transform 0.3s ease, opacity 0.3s ease; }
+    `;
+    document.head.appendChild(style);
+
+
+    // Run setup only after DOM is loaded
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', setupHamburger);
+    } else {
+        setupHamburger(); // DOMContentLoaded has already fired
+    }
+
+</script>
+
+=== index.html ===
+<body class="flex flex-col min-h-screen font-sans text-text_grey text-base md:text-[18px] leading-relaxed tracking-body"> <header id="nav-placeholder" class="min-h-[60px] xl:min-h-0"></header>
+
+    <section class="relative min-h-[55vh] pt-[85px] flex justify-center items-center bg-cover bg-center bg-no-repeat mb-12 md:mb-16" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(83, 83, 83, 0.3)), url('https://images.unsplash.com/photo-1532339142463-fd0a8979791a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"> <div class="relative text-center mt-[5vh] flex flex-col p-0">
+            <h1 class="text-white m-0 font-montserrat font-bold text-5xl sm:text-6xl lg:text-7xl">Alex Klausing</h1>
+            <a href="/pages/resume/resume_sec.html" class="mt-4 no-underline flex justify-center items-center"> <div class="text-center border-[0.3rem] border-sky_white rounded-[2rem] px-6 py-2 sm:px-8 sm:py-3 bg-camp_blue cursor-pointer transition-all duration-300 ease-in-out hover:border-coral hover:bg-camp_blue group"> <p class="text-lg sm:text-xl text-white m-0 font-montserrat font-bold group-hover:text-darkblue transition-colors duration-300">View Resume</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <main class="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section class="flex flex-wrap justify-between items-center p-6 md:p-8 border-8 md:border-[1.5rem] border-camp_blue rounded-[2rem] md:rounded-[4rem] w-full h-auto mb-12 md:mb-16 space-y-4 md:space-y-0"> <div class="flex items-center w-full max-w-[250px] sm:max-w-xs md:flex-[0_0_calc(33.33%-1rem)] md:max-w-[18vw] mx-auto md:mx-0 md:mr-4 justify-center"> <img src="./media/photos/headshot.png" alt="Professional Headshot" class="w-full h-auto rounded-lg shadow-md"> </div>
+            <div class="flex flex-col items-center justify-center w-full md:flex-[0_0_calc(66.66%-1rem)]">
+                <p class="m-0 text-base lg:text-lg italic text-center text-black">
+                    <i>I have been in the camping and outdoor industry since my first season on a summer camp staff in 2003. From 2010 to 2023, with a break due to COVID-19 I served as a full-time professional with the Boy Scouts of America focusing on membership growth, program delivery, and outdoor adventure. I have a proven record of success in all non-profit operations functions, including volunteer recruitment, fundraising, and board engagement. I can't wait to put my experience to work for you!</i>
+                </p>
+                <div class="flex flex-col items-center w-full mt-4 mb-2"> <img src="./media/brandkit/AlexSign.png" alt="Alex Klausing's Signature" class="w-full max-w-[20rem] sm:max-w-[25rem] h-auto pl-0"> </div>
+            </div>
+        </section>
+
+        <div class="flex justify-center items-center w-full mb-8 md:mb-12"> <div class="bg-sky_white text-navyblue rounded-t-[3rem] text-center px-6 py-3 md:px-16 md:py-4 shadow"> <p class="font-montserrat font-bold text-lg md:text-2xl leading-tight uppercase tracking-wide">Previous Full-Time Employers</p>
+          </div>
+        </div>
+
+        <section class="flex flex-wrap justify-center items-start w-full mb-12 md:mb-16"> <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 p-4 flex flex-col items-center text-center"> <img src="./media/partner-logos/Lincoln_Heritage_Stack_4C.jpg" alt="Lincoln Heritage Council, BSA Logo" class="object-contain h-36 mb-2" loading="lazy"> <p class="m-0 text-sm leading-snug"><span class="font-bold">Lincoln Heritage Council</span><br>Boy Scouts of America <br><i>Louisville, Kentucky</i></p>
+          </div>
+           <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 p-4 flex flex-col items-center text-center">
+                <img src="./media/partner-logos/logo-northern-tier-high-adventure.png" alt="Northern Tier High Adventure, BSA Logo" class="object-contain h-36 mb-2" loading="lazy">
+                <p class="m-0 text-sm leading-snug"><span class="font-bold">Northern Tier High Adventure</span><br>Boy Scouts of America <br><i>Ely, Minnesota</i></p>
+            </div>
+            <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 p-4 flex flex-col items-center text-center">
+                <img src="./media/partner-logos/threefirescouncil_logo.png" alt="Three Fires Council, BSA Logo" class="object-contain h-36 mb-2" loading="lazy">
+                <p class="m-0 text-sm leading-snug"><span class="font-bold">Three Fires Council</span><br>Boy Scouts of America <br><i>St. Charles, Illinois</i></p>
+            </div>
+            <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 p-4 flex flex-col items-center text-center">
+                <img src="./media/partner-logos/Greater Tampa Bay Area Council_Stack_4C.jpg" alt="Greater Tampa Bay Area Council, BSA Logo" class="object-contain h-36 mb-2" loading="lazy">
+                <p class="m-0 text-sm leading-snug"><span class="font-bold">Greater Tampa Bay Area Council</span><br>Boy Scouts of America <br><i>Tampa, Florida</i></p>
+            </div>
+            <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 p-4 flex flex-col items-center text-center">
+                <img src="./media/partner-logos/florida-southern-college-logo.jpg" alt="Florida Southern College, Logo" class="object-contain h-36 mb-2" loading="lazy">
+                <p class="m-0 text-sm leading-snug"><span class="font-bold">Florida Southern College</span><br><i>Lakeland, Florida</i></p>
+            </div>
+        </section>
+
+        <div class="flex justify-center items-center w-full mb-8 md:mb-12"> <div class="bg-sky_white text-navyblue rounded-t-[3rem] text-center px-6 py-3 md:px-16 md:py-4 shadow"> <p class="font-montserrat font-bold text-lg md:text-2xl leading-tight uppercase tracking-wide">Previous Seasonal Employers</p>
+            </div>
+        </div>
+
+        <section class="flex flex-wrap justify-center items-start w-full mb-16 md:mb-24"> <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4 flex flex-col items-center text-center"> <img src="./media/partner-logos/CCClogo.jpg" alt="Camp Crooked Creek, BSA Logo" class="object-contain h-36 mb-2" loading="lazy">
+                <p class="m-0 text-sm leading-snug"><span class="font-bold">Camp Crooked Creek</span><br>Lincoln Heritage Council <br>Boy Scouts of America<br><i>Shepherdsville, Kentucky</i></p>
+            </div>
+            <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4 flex flex-col items-center text-center">
+                <img src="./media/partner-logos/philmont-colorlogo.jpg" alt="Philmont Scout Ranch, BSA Logo" class="object-contain h-36 mb-2" loading="lazy">
+                <p class="m-0 text-sm leading-snug"><span class="font-bold">Philmont Scout Ranch</span><br>Boy Scouts of America <br><i>Cimarron, New Mexico</i></p>
+            </div>
+            <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4 flex flex-col items-center text-center">
+                <img src="./media/partner-logos/Bradford_Woods_Logo.png" alt="Bradford Woods Logo" class="object-contain h-36 mb-2" loading="lazy">
+                <p class="m-0 text-sm leading-snug"><span class="font-bold">Bradford Woods</span><br>Indiana University<br><i>Martinsville, Indiana</i></p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="footer-placeholder"></footer>
+
+    <script src="/js/includes.js"></script>
+
+</body>
+</html>
+
+=== js/includes.js ===
+/* professional/js/includes.js */
+
+async function loadHtmlInclude(fileUrl, targetId, mode = 'replace') {
+    try {
+        console.log(`Attempting to fetch: ${fileUrl}`);
+        const response = await fetch(fileUrl);
+        console.log(`Fetch response status for ${fileUrl}: ${response.status}`);
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status} ${response.statusText}`);
+        }
+        // *** MODIFIED: Declare htmlText here ***
+        const htmlText = await response.text();
+
+        if (mode === 'head') {
+            const parser = new DOMParser();
+             // *** MODIFIED: Use htmlText here ***
+            const doc = parser.parseFromString(htmlText, 'text/html');
+            const headContent = doc.head.childNodes;
+            const fragment = document.createDocumentFragment();
+
+            headContent.forEach(node => {
+                const clonedNode = node.cloneNode(true);
+                const nodeName = clonedNode.nodeName.toUpperCase();
+                const isCriticalMeta = nodeName === 'META' && ['description', 'author', 'viewport', 'charset'].includes(clonedNode.getAttribute('name')?.toLowerCase() || clonedNode.getAttribute('charset')?.toLowerCase());
+
+                if (nodeName !== 'TITLE' && !isCriticalMeta) {
+                     let exists = false;
+                     if (nodeName === 'LINK' && clonedNode.hasAttribute('href')) {
+                         exists = document.head.querySelector(`link[href="${clonedNode.getAttribute('href')}"]`);
+                     } else if (nodeName === 'SCRIPT' && clonedNode.hasAttribute('src')) {
+                         exists = document.head.querySelector(`script[src="${clonedNode.getAttribute('src')}"]`);
+                     }
+                     if (!exists) {
+                         fragment.appendChild(clonedNode);
+                     }
+                }
+            });
+            document.head.appendChild(fragment);
+
+        } else {
+            if (!targetId) {
+                console.warn(`Target ID is required for mode '${mode}'. Include skipped for ${fileUrl}.`);
+                return;
+            }
+            const targetElement = document.getElementById(targetId);
+            if (!targetElement) {
+                console.warn(`Target element with ID '${targetId}' not found for include: ${fileUrl}.`);
+                return;
+            }
+
+            // *** MODIFIED: Use htmlText here ***
+            const contentToInsert = htmlText;
+
+            switch (mode) {
+                case 'append':
+                    targetElement.insertAdjacentHTML('beforeend', contentToInsert);
+                    break;
+                case 'prepend':
+                    targetElement.insertAdjacentHTML('afterbegin', contentToInsert);
+                    break;
+                case 'replace':
+                default:
+                    targetElement.innerHTML = contentToInsert;
+                    // Re-run scripts within the loaded content
+                    targetElement.querySelectorAll('script').forEach(script => {
+                        const newScript = document.createElement('script');
+                        script.getAttributeNames().forEach(attr => newScript.setAttribute(attr, script.getAttribute(attr)));
+                        if (script.textContent) {
+                            newScript.textContent = script.textContent;
+                        }
+                        script.parentNode.replaceChild(newScript, script);
+                    });
+                    break;
+            }
+        }
+
+    } catch (error) {
+        console.error(`Error loading include ${fileUrl}:`, error);
+        if (mode !== 'head' && targetId) {
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                 targetElement.innerHTML = `<p class="text-red-500 p-4">Error loading content (${fileUrl}): ${error.name} - ${error.message}</p>`;
+            }
+        }
+    }
+}
+
+// runIncludes function remains the same...
+async function runIncludes() {
+    await Promise.all([
+        loadHtmlInclude('/assets/head.html', null, 'head'),
+        loadHtmlInclude('/assets/navigation.html', 'nav-placeholder', 'replace'),
+        loadHtmlInclude('/assets/footer.html', 'footer-placeholder', 'replace')
+    ]);
+     console.log("Includes processing finished.");
+}
+
+
+// DOMContentLoaded listener remains the same...
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', runIncludes);
+} else {
+    runIncludes();
+}
+
+=== pages/about.html ===
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Alex Klausing | Nonprofit | Outdoor Recreation</title>
+    <meta name="description" content="Learn more about Alex Klausing, a nonprofit, camping, and outdoor recreation programs professional with ten years of experience.">
+    <meta name="author" content="Alex Klausing">
+
+    </head>
+<body class="flex flex-col min-h-screen font-sans text-text_grey text-base md:text-[18px] leading-relaxed tracking-body bg-sky_white"> <header id="nav-placeholder" class="min-h-[60px] xl:min-h-0"></header>
+
+    <main class="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16"> <section class="about-section bg-lightgrey rounded-lg shadow-lg p-6 md:p-10 flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8 mb-12 md:mb-16">
+            <div class="flex-shrink-0 w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56">
+                <img src="/media/brandkit/headshot.png" class="about-img w-full h-full object-cover rounded-full shadow-md border-4 border-white" alt="Alex Klausing Headshot" loading="lazy"> </div>
+            <div class="about-text text-center md:text-left">
+                <h2 class="font-montserrat font-bold text-2xl md:text-3xl lg:text-4xl text-navyblue mb-4">Nonprofit Manager. Program Specialist. Leadership.</h2>
+                <p class="text-base lg:text-lg leading-relaxed space-y-4"> <span>Alex Klausing has been in the camping and outdoor industry since working his first season on a summer camp staff in 2003 and continued through 2010. From 2010 to 2020, Alex served as a full-time professional with the Boy Scouts of America. He focused his career on program and outdoor adventure. He has a proven record of success in all non-profit operations functions, including volunteer recruitment, fundraising, and board engagement.</span>
+
+                    <span>Some of his notable assignments and positions include serving as the Camp Director of Camp Crooked Creek (Shepherdsville, Kentucky), Training Director and Day Camp staff advisor with the Lincoln Heritage Council (Louisville, Kentucky), Associate Director of Program at Northern Tier National High Adventure Base (Ely, Minnesota), and Program Director of the Three Fires Council (St. Charles, Illinois).</span>
+                </p>
+            </div>
+        </section>
+
+        <section class="photo-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+            <div class="photo-box relative group overflow-hidden rounded-lg shadow-md aspect-square">
+                <img src="/media/photos/alexrowing1.jpg" alt="Alex Klausing rowing" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy">
+                <caption class="absolute bottom-0 left-0 w-full bg-black/50 text-white text-xs sm:text-sm p-2 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">Collegiate Athlete | Murray State Rowing (4 Years)</caption>
+            </div>
+            <div class="photo-box relative group overflow-hidden rounded-lg shadow-md aspect-square">
+                <img src="/media/photos/alexhiking5.jpg" alt="Alex Klausing hiking" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy">
+                {/* Removed empty caption */}
+            </div>
+            <div class="photo-box relative group overflow-hidden rounded-lg shadow-md aspect-square">
+                <img src="/media/photos/alexmap.jpg" alt="Alex Klausing reading a map" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy">
+                 {/* Removed empty caption */}
+            </div>
+            <div class="photo-box relative group overflow-hidden rounded-lg shadow-md aspect-square">
+                <img src="/media/photos/ntrecruit.jpg" alt="Northern Tier recruiting booth" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy">
+                 {/* Removed empty caption */}
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="footer-placeholder"></footer>
+
+    <script src="/js/includes.js"></script>
+
+</body>
+</html>
+
+=== pages/contact.html ===
+<head>
+    <script src="https://kit.fontawesome.com/08b6d39fd7.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="flex flex-col min-h-screen font-sans text-text_grey text-base md:text-[18px] leading-relaxed tracking-body">
+
+    <header id="nav-placeholder" class="min-h-[60px] xl:min-h-0"></header>
+
+    <main class="contact-container flex justify-center items-center flex-grow w-full m-0 bg-cover bg-center bg-no-repeat py-16 md:py-24" style="background-image: url('../../media/photos/alexrowing1.jpg');">
+        <div class="contact-box bg-sky_white/95 backdrop-blur-sm rounded-lg shadow-xl border-4 border-darkblue p-6 sm:p-8 md:p-10 w-full max-w-md sm:max-w-lg mx-4 flex flex-col justify-center items-center">
+            <div id="name" class="mb-6">
+                <p class="font-montserrat font-bold text-3xl sm:text-4xl text-darkblue text-center">Alex Klausing</p>
+            </div>
+            <div class="contact-box-sub flex flex-col items-center justify-center space-y-3 w-full">
+                <div class="contact-item flex items-center text-base sm:text-lg">
+                    <i class="fas fa-phone fa-fw w-5 text-center text-coral mr-2"></i>
+ 
+                    <a class="phone text-darkblue hover:text-coral transition-colors duration-200 no-underline" href="tel:+15029302694">502-930-2694</a>
+                </div>
+                <div class="contact-item flex items-center text-base sm:text-lg">
+                    <i class="fas fa-envelope fa-fw w-5 text-center text-coral mr-2"></i>
+                    <a class="text-darkblue hover:text-coral transition-colors duration-200 no-underline break-all" href="mailto:alex.klausing@icloud.com">alex.klausing@icloud.com</a>
+                </div>
+                <div class="contact-item flex items-center text-base sm:text-lg">
+                    <i class="fab fa-linkedin fa-fw w-5 text-center text-coral mr-2 text-xl"></i> 
+                    <a class="linkedin-link flex items-center text-darkblue hover:text-coral transition-colors duration-200 no-underline" href="https://www.linkedin.com/in/alexklausing/">
+                        <span>/alexklausing</span>
+                    </a>
+                </div>
+                <div class="contact-item flex items-center text-base sm:text-lg mt-1"> 
+                    <i class="fas fa-map-marker-alt fa-fw w-5 text-center text-coral mr-2"></i>
+                    <address class="text-darkblue not-italic">Lakeland, Florida USA</address>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer-placeholder"></footer>
+
+    <script src="/js/includes.js"></script>
+
+</body>
+</html>
+
+=== pages/fundraising.html ===
+<?php
+include '../../config.php';
+$header = $base_path . '/assets/header.php';
+$footer_path = $base_path . '/assets/footer.php';
+$navigation_path = $base_path . '/assets/navigation.php';
+
+include $header;
+?>
+
+<!--Page Specific Title and Description Information for SEO-->
+
+<head>
+    <title>Alex Klausing | Nonprofit Fundraising Consultant</title>
+    <meta name="description" content="Fundraising consulting services and training for nonprofits">
+    <link rel="stylesheet" href="css/consulting-services/fundraising.css" type="text/css">
+
+</head>
+
+<body>
+    <?php
+    include($navigation_path);
+    ?>
+    <main>
+        <section>
+            <div class="heading">
+                <h4>Consulting Services</h4>
+            </div>
+
+            <div class="cards">
+                <div class="card">
+                    <div class="card-title">
+                        <h5>Fundraising</h5>
+                    </div>
+                    <div class="card-content">
+                        <ul>
+                            <li>Fundraising Strategy Development</li>
+                            <li>Campaign Planning and Execution</li>
+                            <li>Training for Campaign Workers</li>
+                            <li>Database Optimization</li>
+                            <li>Prospect Research</li>
+                            <li>Event Planning and Management</li>
+                        </ul>
+                    </div>
+                    <div class="image">
+                        <img src="media/photos/dinner.JPG" alt="fundraising dinner">
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </section>
+
+
+    </main>
+    <?php
+    include($footer_path);
+    ?>
+  <script src="js/includes.js"></script>
+</body>
+
+=== pages/references.html ===
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>References | Alex Klausing</title>
+    <meta name="description" content="Professional references for Alex Klausing, a nonprofit, camping, and outdoor recreation programs professional.">
+    <meta name="author" content="Alex Klausing">
+
+    </head>
+<body class="flex flex-col min-h-screen font-sans text-text_grey text-base leading-relaxed tracking-body bg-sky_white">
+
+    <header id="nav-placeholder" class="min-h-[60px] xl:min-h-0"></header>
+
+    <main class="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20">
+
+        <h1 class="font-montserrat font-bold text-3xl md:text-4xl lg:text-5xl text-center text-navyblue mb-10 md:mb-16">References</h1>
+
+        <section class="flex flex-col space-y-12 md:space-y-16">
+
+            <div class="reference-card bg-white rounded-xl shadow-lg flex flex-col lg:flex-row items-center lg:items-start p-6 md:p-8 border border-gray-100 overflow-hidden">
+                {/* Image & Info Section (Aligned Left on Large Screens) */}
+                <div class="flex-shrink-0 flex flex-col items-center text-center w-full lg:w-1/3 lg:pr-8 mb-6 lg:mb-0">
+                    <div class="img-container w-40 h-40 md:w-48 md:h-48 mb-4 rounded-full overflow-hidden border-4 border-midblue shadow-md">
+                        <img src="/media/photos/clintscharff.jfif" alt="Clint Scharff" class="w-full h-full object-cover filter grayscale" loading="lazy">
+                    </div>
+                    <div class="who-info">
+                        <p class="name font-montserrat font-semibold text-xl md:text-2xl text-navyblue leading-tight">Clint Scharff</p>
+                        <p class="title text-base text-darkgrey leading-snug">Chief Executive Officer</p>
+                        <p class="company text-base text-darkgrey leading-snug">Three Fires Council, BSA</p>
+                    </div>
+                </div>
+                {/* Quote Section (Aligned Right on Large Screens) */}
+                <div class="reference-text flex-grow w-full lg:w-2/3 pt-6 lg:pt-0 border-t lg:border-t-0 lg:border-l border-gray-200 lg:pl-8 flex items-center">
+                    <p class="quote italic text-base md:text-lg text-text_grey leading-relaxed text-center lg:text-left">
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    </p>
+                </div>
+            </div>
+
+            {/* Added lg:flex-row-reverse to alternate layout */}
+            <div class="reference-card bg-white rounded-xl shadow-lg flex flex-col lg:flex-row-reverse items-center lg:items-start p-6 md:p-8 border border-gray-100 overflow-hidden">
+                {/* Image & Info Section (Aligned Right on Large Screens) */}
+                <div class="flex-shrink-0 flex flex-col items-center text-center w-full lg:w-1/3 lg:pl-8 mb-6 lg:mb-0">
+                    <div class="img-container w-40 h-40 md:w-48 md:h-48 mb-4 rounded-full overflow-hidden border-4 border-yellow shadow-md">
+                        <img src="/media/photos/jeffzavoral.jfif" alt="Jeff Zavoral" class="w-full h-full object-cover filter grayscale" loading="lazy">
+                    </div>
+                    <div class="who-info">
+                        <p class="name font-montserrat font-semibold text-xl md:text-2xl text-navyblue leading-tight">Jeff Zavoral</p>
+                        <p class="title text-base text-darkgrey leading-snug">Chief Executive Officer</p>
+                        <p class="company text-base text-darkgrey leading-snug">Three Fires Council, BSA</p>
+                    </div>
+                </div>
+                {/* Quote Section (Aligned Left on Large Screens) */}
+                <div class="reference-text flex-grow w-full lg:w-2/3 pt-6 lg:pt-0 border-t lg:border-t-0 lg:border-r border-gray-200 lg:pr-8 flex items-center">
+                    <p class="quote italic text-base md:text-lg text-text_grey leading-relaxed text-center lg:text-left">
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    </p>
+                </div>
+            </div>
+
+            <div class="reference-card bg-white rounded-xl shadow-lg flex flex-col lg:flex-row items-center lg:items-start p-6 md:p-8 border border-gray-100 overflow-hidden">
+                {/* Image & Info Section (Aligned Left on Large Screens) */}
+                <div class="flex-shrink-0 flex flex-col items-center text-center w-full lg:w-1/3 lg:pr-8 mb-6 lg:mb-0">
+                    <div class="img-container w-40 h-40 md:w-48 md:h-48 mb-4 rounded-full overflow-hidden border-4 border-forest_green shadow-md">
+                        <img src="/media/photos/DonHelstern.jfif" alt="Don Helstern" class="w-full h-full object-cover filter grayscale" loading="lazy">
+                    </div>
+                    <div class="who-info">
+                        <p class="name font-montserrat font-semibold text-xl md:text-2xl text-navyblue leading-tight">Don Helstern</p>
+                        <p class="title text-base text-darkgrey leading-snug">Chief Executive Officer</p>
+                        <p class="company text-base text-darkgrey leading-snug">Three Fires Council, BSA</p>
+                    </div>
+                </div>
+                {/* Quote Section (Aligned Right on Large Screens) */}
+                <div class="reference-text flex-grow w-full lg:w-2/3 pt-6 lg:pt-0 border-t lg:border-t-0 lg:border-l border-gray-200 lg:pl-8 flex items-center">
+                    <p class="quote italic text-base md:text-lg text-text_grey leading-relaxed text-center lg:text-left">
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    </p>
+                </div>
+            </div>
+
+            </section>
+
+    </main>
+
+    <footer id="footer-placeholder"></footer>
+
+    <script src="/js/includes.js"></script>
+
+</body>
+</html>
+
+=== pages/relocate.html ===
+<body class="flex flex-col min-h-screen font-sans text-text_grey text-base md:text-[18px] leading-relaxed tracking-body bg-sky_white">
+
+    <header id="nav-placeholder" class="min-h-[60px] xl:min-h-0"></header>
+
+    <header class="relative flex justify-center items-center w-full h-[50vh] bg-cover bg-center bg-no-repeat" style="background-image: url('../../media/photos/cover_canoe.jpeg');">
+        <div class="bg-black/30 p-4 rounded"> {/* Added subtle background for text readability */}
+            <h1 class="font-montserrat text-white text-4xl sm:text-5xl font-medium leading-tight text-center">Relocation Preference</h1>
+        </div>
+    </header>
+
+    <main class="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+
+        <section class="mb-12 md:mb-16">
+            <div class="explanation bg-white text-center p-6 md:p-8 border-4 md:border-[0.7rem] border-darkblue rounded-[2rem] md:rounded-[4rem] shadow-md max-w-4xl mx-auto">
+                 <p class="text-base md:text-lg leading-relaxed">I am most concerned about finding an excellent place to raise a family. For me, that means being in a community that offers an exceptional quality of life. Our top priorities are availability and quality of childcare, schools, and the community's safety. I am open to considering all opportunities; however, the geographic areas I am most interested in are listed below.</p>
+            </div>
+        </section>
+
+        <section class="mb-12 md:mb-16">
+            <div class="text-center mb-8">
+                <h2 class="font-montserrat text-3xl md:text-4xl font-semibold text-darkblue">States</h2>
+            </div>
+            {/* Grid for States */}
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 justify-items-center">
+                {/* State Box (Repeat for each state) */}
+                <div class="state-box w-40 h-40 md:w-48 md:h-48 bg-midblue rounded-2xl flex flex-col justify-center items-center p-4 relative shadow-lg transform transition duration-300 hover:scale-105">
+                    <img src="/media/icons/florida-silhouette.png" alt="Florida Silhouette" class="h-12 md:h-16 w-auto mb-2 filter brightness-0 invert"> {/* Adjusted size/margin */}
+                    <p class="font-semibold text-white text-lg md:text-xl text-center absolute bottom-4">Florida</p> {/* Positioned text */}
+                </div>
+                <div class="state-box w-40 h-40 md:w-48 md:h-48 bg-midblue rounded-2xl flex flex-col justify-center items-center p-4 relative shadow-lg transform transition duration-300 hover:scale-105">
+                    <img src="/media/icons/kentucky-silhouette.png" alt="Kentucky Silhouette" class="h-12 md:h-16 w-auto mb-2 filter brightness-0 invert">
+                    <p class="font-semibold text-white text-lg md:text-xl text-center absolute bottom-4">Kentucky</p>
+                </div>
+                 <div class="state-box w-40 h-40 md:w-48 md:h-48 bg-midblue rounded-2xl flex flex-col justify-center items-center p-4 relative shadow-lg transform transition duration-300 hover:scale-105">
+                    <img src="/media/icons/north-carolina-silhouette.png" alt="North Carolina Silhouette" class="h-12 md:h-16 w-auto mb-2 filter brightness-0 invert">
+                    <p class="font-semibold text-white text-lg md:text-xl text-center absolute bottom-4">North Carolina</p>
+                </div>
+                 <div class="state-box w-40 h-40 md:w-48 md:h-48 bg-midblue rounded-2xl flex flex-col justify-center items-center p-4 relative shadow-lg transform transition duration-300 hover:scale-105">
+                    <img src="/media/icons/virginia-silhouette.png" alt="Virginia Silhouette" class="h-12 md:h-16 w-auto mb-2 filter brightness-0 invert">
+                    <p class="font-semibold text-white text-lg md:text-xl text-center absolute bottom-4">Virginia</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16 md:mb-24"> {/* Increased bottom margin */}
+            <div class="text-center mb-8">
+                <h2 class="font-montserrat text-3xl md:text-4xl font-semibold text-darkblue">Regions</h2>
+            </div>
+             {/* Flexbox for Regions (Can also use Grid) */}
+            <div class="flex flex-wrap justify-center gap-6 md:gap-8">
+                 {/* Region Box (Repeat for each region) */}
+                <div class="region-box w-full sm:w-80 md:w-96 bg-forest_green rounded-2xl flex justify-center items-center p-6 h-24 shadow-lg transform transition duration-300 hover:scale-105"> {/* Adjusted size/padding */}
+                    <p class="font-semibold text-white text-lg md:text-xl text-center">Rocky Mountain Area</p>
+                </div>
+                <div class="region-box w-full sm:w-80 md:w-96 bg-forest_green rounded-2xl flex justify-center items-center p-6 h-24 shadow-lg transform transition duration-300 hover:scale-105">
+                    <p class="font-semibold text-white text-lg md:text-xl text-center">Blue Ridge Mountain Area</p>
+                </div>
+                <div class="region-box w-full sm:w-80 md:w-96 bg-forest_green rounded-2xl flex justify-center items-center p-6 h-24 shadow-lg transform transition duration-300 hover:scale-105">
+                    <p class="font-semibold text-white text-lg md:text-xl text-center">Along the Appalachian Trail</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="footer-placeholder"></footer>
+
+    <script src="/js/includes.js"></script>
+
+</body>
+</html>
+
+=== pages/resume/resume.html ===
+
+<body class="flex flex-col min-h-screen font-sans text-text_grey text-base md:text-[18px] leading-relaxed tracking-body">
+
+    <header id="nav-placeholder" class="min-h-[60px] xl:min-h-0"></header>
+
+    <header class="relative flex justify-center items-center w-full h-[30vh] md:h-[20em] bg-cover bg-center bg-no-repeat" style="background-image: url('../../media/photos/paddles.jpg');">
+        <div class="download-btn w-auto px-6 sm:px-0 sm:w-80 h-16 bg-coral flex items-center justify-center cursor-pointer shadow-md rounded-lg border-2 border-transparent hover:bg-[#FF8B61] hover:border-darkblue group transition duration-300 ease-in-out">
+            <a class="text-white text-lg sm:text-xl font-bold font-montserrat no-underline group-hover:text-darkblue transition-colors duration-300" href="/media/documents/Alex Klausing Resume.pdf" download>Download Resume</a>
+        </div>
+    </header>
+
+    <main class="flex-grow w-full max-w-7xl mx-auto px-0 sm:px-6 lg:px-8 py-8 md:py-12">
+        <div class="pdf-container w-full aspect-video md:aspect-[4/3] lg:aspect-[3/2] shadow-lg rounded-md overflow-hidden border border-gray-200">
+             <iframe src="../../media/documents/Alex Klausing Resume.pdf" class="w-full h-full border-none" title="Alex Klausing Resume PDF"></iframe>
+            </div>
+    </main>
+
+    <footer id="footer-placeholder"></footer>
+
+    <script src="/js/includes.js"></script>
+
+</body>
+</html>
+
+=== pages/resume/resume_sec.html ===
+<head>
+    <style>
+        .content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out; /* Smooth transition */
+            background-color: #f1f1f1; /* --backgroundgrey */
+        }
+        /* Style for the active button state '+' sign rotation */
+        .company.active span {
+             transform: rotate(45deg);
+        }
+        /* Style to remove bottom radius when open for seamless look */
+         .company.active {
+              border-bottom-right-radius: 0;
+              border-bottom-left-radius: 0;
+         }
+         /* Ensure content below active button has no top radius */
+         .company.active + .content > div {
+             border-top-left-radius: 0;
+             border-top-right-radius: 0;
+         }
+
+    </style>
+    <script src="https://kit.fontawesome.com/08b6d39fd7.js" crossorigin="anonymous"></script>
+</head>
+<body class="flex flex-col min-h-screen font-sans text-text_grey text-base md:text-[18px] leading-relaxed tracking-body"> <header id="nav-placeholder" class="min-h-[60px] xl:min-h-0"></header>
+
+    <header class="relative w-full h-[30vh] sm:h-[40vh] bg-cover bg-center bg-no-repeat" style="background-image: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),url('https://images.unsplash.com/photo-1532339142463-fd0a8979791a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+        <div class="absolute top-[70%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-auto px-6 sm:px-0 sm:w-80 h-16 bg-coral flex items-center justify-center cursor-pointer shadow-md rounded-lg border-2 border-transparent hover:bg-[#FF8B61] hover:border-darkblue group transition duration-300 ease-in-out"> <a class="text-white text-lg sm:text-xl font-bold font-montserrat no-underline group-hover:text-darkblue transition-colors duration-300" href="/media/documents/Alex Klausing Resume.pdf" download>Download Resume</a> </div>
+    </header>
+
+    <main class="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section class="flex flex-wrap justify-center content-center w-full py-8 md:py-12"> <div class="role-box flex flex-col w-full mb-12 md:mb-16"> <div class="role flex flex-col md:flex-row md:items-start space-y-4 md:space-y-0 md:space-x-6"> <div class="logo-box flex justify-center md:justify-start items-center flex-shrink-0 mx-auto md:mx-0"> <img src="../../media/partner-logos/florida-southern-college-logo.jpg" alt="Florida Southern College Logo" class="object-contain h-auto w-auto max-h-28 md:max-h-32" loading="lazy"> </div>
+                    <div class="position flex flex-col w-full">
+                        <div class="title-box flex flex-col sm:flex-row justify-between items-baseline w-full mb-2 space-y-1 sm:space-y-0">
+                            <h4 class="text-midblue font-montserrat font-bold text-xl md:text-2xl leading-tight">Adventure Recreation & Risk Management Coordinator</h4>
+                            <p class="text-midblue uppercase text-xs sm:text-sm tracking-wide flex-shrink-0 sm:ml-4">August 2024 - Current</p> </div>
+                        <div class="company-profile overflow-hidden rounded-lg shadow-sm border border-gray-200"> <button type="button" class="company bg-midblue text-white cursor-pointer px-4 py-2 w-full border-none text-left outline-none rounded-t-lg text-base md:text-lg flex justify-between items-center hover:border-2 hover:border-coral group transition duration-200">
+                                Florida Southern College
+                                <span class="font-semibold text-coral text-2xl transition-transform duration-300 ease-in-out group-[.active]:rotate-45 block transform-origin-center flex-shrink-0 ml-2">+</span>
+                            </button>
+                            <div class="content"> <div class="profile p-4 md:p-6 text-sm rounded-b-lg border-t border-gray-200"> <div class="contact flex flex-col md:flex-row justify-between py-2 no-underline space-y-2 md:space-y-0 text-xs md:text-sm"> <a class="address text-midblue hover:text-coral no-underline flex items-center" href="https://www.google.com/maps/place/Florida+Southern+College"><i class="fas fa-map-marker-alt text-coral mr-1.5 w-4 text-center"></i> 111 Lake Hollingsworth Dr, Lakeland, FL 33801</a>
+                                        <a class="phone text-midblue hover:text-coral no-underline flex items-center" href="tel:8636806290"><i class="fas fa-phone text-coral mr-1.5 w-4 text-center"></i> 863.680.6290</a>
+                                        <a class="website text-midblue hover:text-coral no-underline flex items-center" href="https://www.flsouthern.edu/"><i class="fas fa-globe text-coral mr-1.5 w-4 text-center"></i> https://www.flsouthern.edu/</a>
+                                    </div>
+                                    <hr class="my-3 border-t border-gray-300">
+                                    <p class="text-sm leading-relaxed">Florida Southern College, founded in 1883 in Lakeland, Florida, is a private institution enrolling over 3,000 students from across the U.S. and abroad, offering more than 70 undergraduate and graduate degree programs in fields like business, nursing, and the liberal arts. The college is nationally recognized for its personalized academic experience, with a low student-faculty ratio and the world’s largest single-site collection of Frank Lloyd Wright architecture.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="role-text pt-4 md:pl-[calc(120px+1.5rem)]"> <p class="summary text-darkblue mb-4 text-base leading-relaxed">Provide oversight and management of all adventure recreation programs, including adventure trips, waterfront activities, and climbing wall operations. Departmental lead for risk management focusing on health and safety.</p>
+                    <ul class="accomplishments bg-sky_white rounded-lg p-4 sm:p-6 w-full border-2 md:border-[0.3rem] border-navyblue text-navyblue list-disc list-inside space-y-1.5 text-sm md:text-base leading-relaxed"> <li></li> </ul>
+                </div>
+            </div>
+
+            <div class="role-box flex flex-col w-full mb-12 md:mb-16">
+                <div class="role flex flex-col md:flex-row md:items-start space-y-4 md:space-y-0 md:space-x-6">
+                    <div class="logo-box flex justify-center md:justify-start items-center flex-shrink-0 mx-auto md:mx-0">
+                        <img src="../../media/partner-logos/Greater Tampa Bay Area Council_Stack_4C.jpg" alt="Greater Tampa Bay Area Council Logo" class="object-contain h-auto w-auto max-h-28 md:max-h-32" loading="lazy">
+                    </div>
+                    <div class="position flex flex-col w-full">
+                         <div class="title-box flex flex-col sm:flex-row justify-between items-baseline w-full mb-2 space-y-1 sm:space-y-0">
+                            <h4 class="text-midblue font-montserrat font-bold text-xl md:text-2xl leading-tight">District Director</h4>
+                            <p class="text-midblue uppercase text-xs sm:text-sm tracking-wide flex-shrink-0 sm:ml-4">July 2021 - July 2023</p>
+                        </div>
+                         <div class="company-profile overflow-hidden rounded-lg shadow-sm border border-gray-200">
+                            <button type="button" class="company bg-midblue text-white cursor-pointer px-4 py-2 w-full border-none text-left outline-none rounded-t-lg text-base md:text-lg flex justify-between items-center hover:border-2 hover:border-coral group transition duration-200">
+                                Greater Tampa Bay Area Council, Boy Scouts of America
+                                <span class="font-semibold text-coral text-2xl transition-transform duration-300 ease-in-out group-[.active]:rotate-45 block transform-origin-center flex-shrink-0 ml-2">+</span>
+                            </button>
+                            <div class="content">
+                                <div class="profile p-4 md:p-6 text-sm rounded-b-lg border-t border-gray-200">
+                                    <div class="contact flex flex-col md:flex-row justify-between py-2 no-underline space-y-2 md:space-y-0 text-xs md:text-sm">
+                                        <a class="address text-midblue hover:text-coral no-underline flex items-center" href="https://www.google.com/maps/place/13228+N+Central+Ave,+Tampa,+FL+33612"><i class="fas fa-map-marker-alt text-coral mr-1.5 w-4 text-center"></i> 13228 N Central Ave, Tampa, FL 33612</a>
+                                        <a class="phone text-midblue hover:text-coral no-underline flex items-center" href="tel:8138722691"><i class="fas fa-phone text-coral mr-1.5 w-4 text-center"></i> 813.872.2691</a>
+                                        <a class="website text-midblue hover:text-coral no-underline flex items-center" href="http://tampabayscouting.org/"><i class="fas fa-globe text-coral mr-1.5 w-4 text-center"></i> http://tampabayscouting.org/</a>
+                                    </div>
+                                    <hr class="my-3 border-t border-gray-300">
+                                    <p class="text-sm leading-relaxed mb-1">The mission of the Boy Scouts of America is to prepare young people to make ethical and moral choices over their lifetimes by instilling in them the values of the Scout Oath and Law.</p>
+                                    <p class="text-sm leading-relaxed">The Greater Tampa Bay Area Council is a local chapter of the Boy Scouts of America and is a 501c3 nonprofit organization. The council serves 11,000 families living across nine counties surrounding Tampa, FL.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="role-text pt-4 md:pl-[calc(120px+1.5rem)]">
+                    <p class="summary text-darkblue mb-4 text-base leading-relaxed">Provided organizational leadership to all operations within assigned territory (Polk, Highlands, and Hardee counties) including membership growth, new business development, fundraising, and program. Served as the direct manager for an entry level executive.</p>
+                    <ul class="accomplishments bg-sky_white rounded-lg p-4 sm:p-6 w-full border-2 md:border-[0.3rem] border-navyblue text-navyblue list-disc list-inside space-y-1.5 text-sm md:text-base leading-relaxed">
+                        <li>Achieved 6.5% year-over-year membership growth in 2022, earning CEO's Winners Circle Award.</li>
+                        <li>Territory is tracking 18% ahead of year over year membership as of June 2023.</li>
+                        <li>Increased council-wide day camp attendance by 132% in 2022, while serving as the project lead.</li>
+                        <li>Established 10 new program sites through utilization of the BSA sales model, expanding opportunities for participation.</li>
+                        <li>Secured funding through the United Way of Central Florida and the GiveWell Community Foundation, which enabled programming for under-served populations.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="role-box flex flex-col w-full mb-12 md:mb-16">
+                <div class="role flex flex-col md:flex-row md:items-start space-y-4 md:space-y-0 md:space-x-6">
+                    <div class="logo-box flex justify-center md:justify-start items-center flex-shrink-0 mx-auto md:mx-0">
+                        <img src="../../media/partner-logos/threefirescouncil_logo.png" alt="Three Fires Council Logo" class="object-contain h-auto w-auto max-h-28 md:max-h-32" loading="lazy">
+                    </div>
+                    <div class="position flex flex-col w-full">
+                         <div class="title-box flex flex-col sm:flex-row justify-between items-baseline w-full mb-2 space-y-1 sm:space-y-0">
+                            <h4 class="text-midblue font-montserrat font-bold text-xl md:text-2xl leading-tight">Program Director</h4>
+                            <p class="text-midblue uppercase text-xs sm:text-sm tracking-wide flex-shrink-0 sm:ml-4">May 2019 - June 2020</p>
+                        </div>
+                         <div class="company-profile overflow-hidden rounded-lg shadow-sm border border-gray-200">
+                            <button type="button" class="company bg-midblue text-white cursor-pointer px-4 py-2 w-full border-none text-left outline-none rounded-t-lg text-base md:text-lg flex justify-between items-center hover:border-2 hover:border-coral group transition duration-200">
+                                Three Fires Council, Boy Scouts of America
+                                <span class="font-semibold text-coral text-2xl transition-transform duration-300 ease-in-out group-[.active]:rotate-45 block transform-origin-center flex-shrink-0 ml-2">+</span>
+                            </button>
+                            <div class="content">
+                                <div class="profile p-4 md:p-6 text-sm rounded-b-lg border-t border-gray-200">
+                                    <div class="contact flex flex-col md:flex-row justify-between py-2 no-underline space-y-2 md:space-y-0 text-xs md:text-sm">
+                                        <a class="address text-midblue hover:text-coral no-underline flex items-center" href="https://www.google.com/maps/place/415+N+2nd+St,+St.+Charles,+IL+60174"><i class="fas fa-map-marker-alt text-coral mr-1.5 w-4 text-center"></i> 415 North 2nd Street, St. Charles, IL 60174</a>
+                                        <a class="phone text-midblue hover:text-coral no-underline flex items-center" href="tel:6305849250"><i class="fas fa-phone text-coral mr-1.5 w-4 text-center"></i> 630.584.9250</a>
+                                        <a class="website text-midblue hover:text-coral no-underline flex items-center" href="https://threefirescouncil.org/"><i class="fas fa-globe text-coral mr-1.5 w-4 text-center"></i> https://threefirescouncil.org</a>
+                                    </div>
+                                    <hr class="my-3 border-t border-gray-300">
+                                    <p class="text-sm leading-relaxed mb-1">The mission of the Boy Scouts of America is to prepare young people to make ethical and moral choices over their lifetimes by instilling in them the values of the Scout Oath and Law.</p>
+                                    <p class="text-sm leading-relaxed">The Three Fires Council is a local chapter of the Boy Scouts of America and is a 501c3 nonprofit organization. The council serves 14,000 families living west of Chicago, Illinois in DeKalb, DuPage, Kane, Kendall, and parts of Cook and Will counties.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="role-text pt-4 md:pl-[calc(120px+1.5rem)]">
+                    <p class="summary text-darkblue mb-4 text-base leading-relaxed">Supported executive board and subcommittee volunteers in all aspects of program delivery, including camping, activities, training, properties, and enterprise risk management for 14,000 registered youth members and 5,000 adult volunteers across five counties in northern Illinois. Accountable for $1.1 million income from year-round activities, summer camp operations, and property management for two camps totaling 575 acres.</p>
+                    <ul class="accomplishments bg-sky_white rounded-lg p-4 sm:p-6 w-full border-2 md:border-[0.3rem] border-navyblue text-navyblue list-disc list-inside space-y-1.5 text-sm md:text-base leading-relaxed">
+                        <li>Salvaged over $200,000 in income by developing a COVID-19 summer camp plan that exceeded state guidelines enabling over 530 teens to have a weeklong camp experience.</li>
+                        <li>Beat expectations of strategic plan by 5% or $17,886 for activities and training grossing $376,070.</li>
+                        <li>Outperformed best year in the past three by 9% or 434 visitors with 5,250 total customers at two camp properties in 2019.</li>
+                        <li>Saved $17,564 or 8.4% on property management budgets in 2019.</li>
+                        <li>Achieved accredited status for all day camps (8) and residential summer camps (2).</li>
+                        <li>Conceptualized and lead creation of home camp program which generated 300 sales in four weeks.</li>
+                        <li>Organized two sold out new member program events attracting over 800 participants.</li>
+                        <li>Developed multiple Microsoft Access databases utilizing Visual Basic, SQL, and Office365 automation to support functions of staff hiring, purchasing, and budget tracking in this and previous roles.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="role-box flex flex-col w-full mb-12 md:mb-16">
+                <div class="role flex flex-col md:flex-row md:items-start space-y-4 md:space-y-0 md:space-x-6">
+                    <div class="logo-box flex justify-center md:justify-start items-center flex-shrink-0 mx-auto md:mx-0">
+                        <img src="../../media/partner-logos/threefirescouncil_logo.png" alt="Three Fires Council Logo" class="object-contain h-auto w-auto max-h-28 md:max-h-32" loading="lazy">
+                    </div>
+                    <div class="position flex flex-col w-full">
+                         <div class="title-box flex flex-col sm:flex-row justify-between items-baseline w-full mb-2 space-y-1 sm:space-y-0">
+                            <h4 class="text-midblue font-montserrat font-bold text-xl md:text-2xl leading-tight">District Director</h4>
+                            <p class="text-midblue uppercase text-xs sm:text-sm tracking-wide flex-shrink-0 sm:ml-4">October 2018 - May 2019</p>
+                        </div>
+                         <div class="company-profile overflow-hidden rounded-lg shadow-sm border border-gray-200">
+                            <button type="button" class="company bg-midblue text-white cursor-pointer px-4 py-2 w-full border-none text-left outline-none rounded-t-lg text-base md:text-lg flex justify-between items-center hover:border-2 hover:border-coral group transition duration-200">
+                                Three Fires Council, Boy Scouts of America
+                               <span class="font-semibold text-coral text-2xl transition-transform duration-300 ease-in-out group-[.active]:rotate-45 block transform-origin-center flex-shrink-0 ml-2">+</span>
+                            </button>
+                            <div class="content">
+                                <div class="profile p-4 md:p-6 text-sm rounded-b-lg border-t border-gray-200">
+                                    <div class="contact flex flex-col md:flex-row justify-between py-2 no-underline space-y-2 md:space-y-0 text-xs md:text-sm">
+                                        <a class="address text-midblue hover:text-coral no-underline flex items-center" href="https://www.google.com/maps/place/415+N+2nd+St,+St.+Charles,+IL+60174"><i class="fas fa-map-marker-alt text-coral mr-1.5 w-4 text-center"></i> 415 North 2nd Street, St. Charles, IL 60174</a>
+                                        <a class="phone text-midblue hover:text-coral no-underline flex items-center" href="tel:6305849250"><i class="fas fa-phone text-coral mr-1.5 w-4 text-center"></i> 630.584.9250</a>
+                                        <a class="website text-midblue hover:text-coral no-underline flex items-center" href="https://threefirescouncil.org/"><i class="fas fa-globe text-coral mr-1.5 w-4 text-center"></i> https://threefirescouncil.org</a>
+                                    </div>
+                                    <hr class="my-3 border-t border-gray-300">
+                                    <p class="text-sm leading-relaxed mb-1">The mission of the Boy Scouts of America is to prepare young people to make ethical and moral choices over their lifetimes by instilling in them the values of the Scout Oath and Law.</p>
+                                    <p class="text-sm leading-relaxed">The Three Fires Council is a local chapter of the Boy Scouts of America and is a 501c3 nonprofit organization. The council serves 14,000 families living west of Chicago, Illinois in DeKalb, DuPage, Kane, Kendall, and parts of Cook and Will counties. In this role, I primarily served members in the northeast portion of DuPage county.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="role-text pt-4 md:pl-[calc(120px+1.5rem)]">
+                    <p class="summary text-darkblue mb-4 text-base leading-relaxed">Worked through a volunteer committee to carry out operational functions including membership, fundraising, and program within assigned territory. Served as the direct manager for an entry level district executive in a neighboring territory and served as a back-up executive for the area. Combined year-end membership of 2,365 youth participants.</p>
+                    <ul class="accomplishments bg-sky_white rounded-lg p-4 sm:p-6 w-full border-2 md:border-[0.3rem] border-navyblue text-navyblue list-disc list-inside space-y-1.5 text-sm md:text-base leading-relaxed">
+                        <li>Recognized as one of the top 100 executives in the central region for membership growth in 2019.</li>
+                        <li>Achieved attendance record of 1,535 Scouts at the largest single day merit badge event in the BSA grossing over $70,000.</li>
+                        <li>Increased camp attendance by 25% over prior year through targeted promotional strategies.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="role-box flex flex-col w-full mb-12 md:mb-16">
+                <div class="role flex flex-col md:flex-row md:items-start space-y-4 md:space-y-0 md:space-x-6">
+                    <div class="logo-box flex justify-center md:justify-start items-center flex-shrink-0 mx-auto md:mx-0">
+                        <img src="../../media/partner-logos/logo-northern-tier-high-adventure.png" alt="Northern Tier High Adventure, BSA logo" class="object-contain h-auto w-auto max-h-28 md:max-h-32" loading="lazy">
+                    </div>
+                    <div class="position flex flex-col w-full">
+                         <div class="title-box flex flex-col sm:flex-row justify-between items-baseline w-full mb-2 space-y-1 sm:space-y-0">
+                            <h4 class="text-midblue font-montserrat font-bold text-xl md:text-2xl leading-tight">Associate Program Director</h4>
+                            <p class="text-midblue uppercase text-xs sm:text-sm tracking-wide flex-shrink-0 sm:ml-4">December 2017 - October 2018</p>
+                        </div>
+                         <div class="company-profile overflow-hidden rounded-lg shadow-sm border border-gray-200">
+                            <button type="button" class="company bg-midblue text-white cursor-pointer px-4 py-2 w-full border-none text-left outline-none rounded-t-lg text-base md:text-lg flex justify-between items-center hover:border-2 hover:border-coral group transition duration-200">
+                                Northern Tier High Adventure, Boy Scouts of America
+                               <span class="font-semibold text-coral text-2xl transition-transform duration-300 ease-in-out group-[.active]:rotate-45 block transform-origin-center flex-shrink-0 ml-2">+</span>
+                            </button>
+                            <div class="content">
+                                <div class="profile p-4 md:p-6 text-sm rounded-b-lg border-t border-gray-200">
+                                    <div class="contact flex flex-col md:flex-row justify-between py-2 no-underline space-y-2 md:space-y-0 text-xs md:text-sm">
+                                        <a class="address text-midblue hover:text-coral no-underline flex items-center" href="https://www.google.com/maps/place/14790+Moose+Lake+Rd,+Ely,+MN+55731"><i class="fas fa-map-marker-alt text-coral mr-1.5 w-4 text-center"></i> 14790 Moose Lake Road, Ely, Minnesota 55731</a>
+                                        <a class="phone text-midblue hover:text-coral no-underline flex items-center" href="tel:2183654811"><i class="fas fa-phone text-coral mr-1.5 w-4 text-center"></i> 218.365.4811</a>
+                                        <a class="website text-midblue hover:text-coral no-underline flex items-center" href="https://www.ntier.org/"><i class="fas fa-globe text-coral mr-1.5 w-4 text-center"></i> https://www.ntier.org/</a>
+                                    </div>
+                                    <hr class="my-3 border-t border-gray-300">
+                                    <p class="text-sm leading-relaxed mb-1">The mission of the Boy Scouts of America is to prepare young people to make ethical and moral choices over their lifetimes by instilling in them the values of the Scout Oath and Law.</p>
+                                    <p class="text-sm leading-relaxed">Northern Tier is the Boy Scouts of America’s gateway to adventure in the Great Northwoods. In the summer, Scouts from Northern Tier’s three wilderness canoe bases explore millions of acres of pristine lakes, meandering rivers, dense forests and wetlands in Northern Minnesota, Northwest Ontario and Northeast Manitoba.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="role-text pt-4 md:pl-[calc(120px+1.5rem)]">
+                    <p class="summary text-darkblue mb-4 text-base leading-relaxed">Provided leadership to seasonal staff recruitment, hiring, and training functions for over 250 personnel on an annual basis which supported program for 7,570 participants in 2018. Directly accountable for $1 million in budgeted expenses. Served as the purchasing agent for all non-retail equipment. Additional assignments included individual programs, conferences, and outreach initiatives.</p>
+                    <ul class="accomplishments bg-sky_white rounded-lg p-4 sm:p-6 w-full border-2 md:border-[0.3rem] border-navyblue text-navyblue list-disc list-inside space-y-1.5 text-sm md:text-base leading-relaxed">
+                        <li>Secured 44 staff members mid-season to support customers displaced by wildfires redirected to our location by coordinating transportation from a BSA property in New Mexico and to their home destination at the conclusion of the season.</li>
+                        <li>Generated over 100 new staff leads by capturing data at job fair and recruiting events in Minnesota and surrounding states.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="role-box flex flex-col w-full mb-12 md:mb-16">
+                <div class="role flex flex-col md:flex-row md:items-start space-y-4 md:space-y-0 md:space-x-6">
+                    <div class="logo-box flex justify-center md:justify-start items-center flex-shrink-0 mx-auto md:mx-0">
+                        <img src="../../media/partner-logos/Lincoln_Heritage_Stack_4C.jpg" alt="Lincoln Heritage Council, BSA logo" class="object-contain h-auto w-auto max-h-28 md:max-h-32" loading="lazy">
+                    </div>
+                    <div class="position flex flex-col w-full">
+                         <div class="title-box flex flex-col sm:flex-row justify-between items-baseline w-full mb-2 space-y-1 sm:space-y-0">
+                            <h4 class="text-midblue font-montserrat font-bold text-xl md:text-2xl leading-tight">Training Director</h4>
+                            <p class="text-midblue uppercase text-xs sm:text-sm tracking-wide flex-shrink-0 sm:ml-4">December 2016 - November 2017</p>
+                        </div>
+                         <div class="company-profile overflow-hidden rounded-lg shadow-sm border border-gray-200">
+                            <button type="button" class="company bg-midblue text-white cursor-pointer px-4 py-2 w-full border-none text-left outline-none rounded-t-lg text-base md:text-lg flex justify-between items-center hover:border-2 hover:border-coral group transition duration-200">
+                                Lincoln Heritage Council, Boy Scouts of America
+                               <span class="font-semibold text-coral text-2xl transition-transform duration-300 ease-in-out group-[.active]:rotate-45 block transform-origin-center flex-shrink-0 ml-2">+</span>
+                            </button>
+                            <div class="content">
+                                <div class="profile p-4 md:p-6 text-sm rounded-b-lg border-t border-gray-200">
+                                    <div class="contact flex flex-col md:flex-row justify-between py-2 no-underline space-y-2 md:space-y-0 text-xs md:text-sm">
+                                        <a class="address text-midblue hover:text-coral no-underline flex items-center" href="https://www.google.com/maps/place/12001+Sycamore+Station+Pl,+Louisville,+KY+40299"><i class="fas fa-map-marker-alt text-coral mr-1.5 w-4 text-center"></i> 12001 Sycamore Station Place, Louisville, Kentucky 40299</a>
+                                        <a class="phone text-midblue hover:text-coral no-underline flex items-center" href="tel:5023612624"><i class="fas fa-phone text-coral mr-1.5 w-4 text-center"></i> 502.361.2624</a>
+                                        <a class="website text-midblue hover:text-coral no-underline flex items-center" href="https://www.lhcbsa.org/"><i class="fas fa-globe text-coral mr-1.5 w-4 text-center"></i> https://www.lhcbsa.org/</a>
+                                    </div>
+                                    <hr class="my-3 border-t border-gray-300">
+                                    <p class="text-sm leading-relaxed mb-1">The mission of the Boy Scouts of America is to prepare young people to make ethical and moral choices over their lifetimes by instilling in them the values of the Scout Oath and Law.</p>
+                                    <p class="text-sm leading-relaxed">The Lincoln Heritage Council governs and provides services that support the Scouting program in 64 counties located across portions of four states: Kentucky, Indiana, Illinois, and Tennessee.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="role-text pt-4 md:pl-[calc(120px+1.5rem)]">
+                    <p class="summary text-darkblue mb-4 text-base leading-relaxed">Responsible for advanced youth and adult training courses, including University of Scouting, Wood Badge, and National Youth Leadership Training. Provided leadership to day camps for youth 7-10 years of age, held in 15 different locations across Kentucky and Southern Indiana. Supported STEM Scouts pilot program initiative.</p>
+                    <ul class="accomplishments bg-sky_white rounded-lg p-4 sm:p-6 w-full border-2 md:border-[0.3rem] border-navyblue text-navyblue list-disc list-inside space-y-1.5 text-sm md:text-base leading-relaxed">
+                        <li>Increased day camp attendance by 13.2% compared to prior year (1,305 campers total).</li>
+                        <li>Posted surplus of $26,171 for FY17 (total income of $114,175) in directly managed budgets through August.</li>
+                        <li>Increased advanced training attendance over prior year by 2.25% (136 participants total)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="role-box flex flex-col w-full mb-12 md:mb-16"> <div class="role flex flex-col md:flex-row md:items-start space-y-4 md:space-y-0 md:space-x-6">
+                     <div class="logo-box flex justify-center md:justify-start items-center flex-shrink-0 mx-auto md:mx-0">
+                        <img src="../../media/partner-logos/Lincoln_Heritage_Stack_4C.jpg" alt="Lincoln Heritage Council, BSA logo" class="object-contain h-auto w-auto max-h-28 md:max-h-32" loading="lazy">
+                    </div>
+                     <div class="position flex flex-col w-full">
+                         <div class="title-box flex flex-col sm:flex-row justify-between items-baseline w-full mb-2 space-y-1 sm:space-y-0">
+                            <h4 class="text-midblue font-montserrat font-bold text-xl md:text-2xl leading-tight">District Executive / Sr. District Executive</h4>
+                            <p class="text-midblue uppercase text-xs sm:text-sm tracking-wide flex-shrink-0 sm:ml-4">December 2010 - December 2016</p>
+                        </div>
+                         <div class="company-profile overflow-hidden rounded-lg shadow-sm border border-gray-200">
+                            <button type="button" class="company bg-midblue text-white cursor-pointer px-4 py-2 w-full border-none text-left outline-none rounded-t-lg text-base md:text-lg flex justify-between items-center hover:border-2 hover:border-coral group transition duration-200">
+                                Lincoln Heritage Council, Boy Scouts of America
+                               <span class="font-semibold text-coral text-2xl transition-transform duration-300 ease-in-out group-[.active]:rotate-45 block transform-origin-center flex-shrink-0 ml-2">+</span>
+                            </button>
+                             <div class="content">
+                                <div class="profile p-4 md:p-6 text-sm rounded-b-lg border-t border-gray-200">
+                                    <div class="contact flex flex-col md:flex-row justify-between py-2 no-underline space-y-2 md:space-y-0 text-xs md:text-sm">
+                                        <a class="address text-midblue hover:text-coral no-underline flex items-center" href="https://www.google.com/maps/place/12001+Sycamore+Station+Pl,+Louisville,+KY+40299"><i class="fas fa-map-marker-alt text-coral mr-1.5 w-4 text-center"></i> 12001 Sycamore Station Place, Louisville, Kentucky 40299</a>
+                                        <a class="phone text-midblue hover:text-coral no-underline flex items-center" href="tel:5023612624"><i class="fas fa-phone text-coral mr-1.5 w-4 text-center"></i> 502.361.2624</a>
+                                        <a class="website text-midblue hover:text-coral no-underline flex items-center" href="https://www.lhcbsa.org/"><i class="fas fa-globe text-coral mr-1.5 w-4 text-center"></i> https://www.lhcbsa.org/</a>
+                                    </div>
+                                    <hr class="my-3 border-t border-gray-300">
+                                    <p class="text-sm leading-relaxed mb-1">The mission of the Boy Scouts of America is to prepare young people to make ethical and moral choices over their lifetimes by instilling in them the values of the Scout Oath and Law.</p>
+                                    <p class="text-sm leading-relaxed">The Lincoln Heritage Council governs and provides services that support the Scouting program in 64 counties located across portions of four states: Kentucky, Indiana, Illinois, and Tennessee.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="role-text pt-4 md:pl-[calc(120px+1.5rem)]">
+                    <p class="summary text-darkblue mb-4 text-base leading-relaxed">Carried out operational functions of membership sales, fundraising, and program delivery by working through a volunteer committee averaging 41 members supporting an average of 1954 registered youth. Lead camp operations including hiring, training, and in session management of all staff for a camp that served over 3,000 youth and adult participants per summer over six, one-week sessions. The camp operated on an annual income of over $500,000 and averaged a staff of 80.</p>
+                    <ul class="accomplishments bg-sky_white rounded-lg p-4 sm:p-6 w-full border-2 md:border-[0.3rem] border-navyblue text-navyblue list-disc list-inside space-y-1.5 text-sm md:text-base leading-relaxed">
+                        <li>Raised $452,000 in combined net revenue from product sales and fundraising campaigns.</li>
+                        <li>Increased product sale revenue by 13% in first year through volunteer engagement.</li>
+                        <li>Established 12 new Scouting programs through utilization of the BSA sales model.</li>
+                        <li>Increased member retention by 7% from 2010-2015.</li>
+                        <li>Returned $22,400 over three years to operating fund through sound management of camp salaries.</li>
+                        <li>Reached email open rates averaging 25% by adopting and utilizing an email distribution service.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer id="footer-placeholder"></footer>
+
+    <script src="/js/includes.js"></script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // --- Setup Accordion Buttons ---
+        const setupAccordions = () => {
+            const accordions = document.querySelectorAll('button.company');
+            console.log("Found accordion buttons:", accordions.length);
+
+            if (accordions.length > 0) {
+                accordions.forEach(button => {
+                    if(button.dataset.listenerAttached) return; // Prevent attaching multiple listeners
+
+                    button.addEventListener('click', () => {
+                        console.log("Button clicked:", button.innerText);
+                        // Toggle active class on the button itself for styling the '+'
+                         button.classList.toggle('active');
+
+                        const content = button.nextElementSibling;
+
+                        if (content && content.classList.contains('content')) {
+                            // Check if content is currently open (maxHeight is not 0 or null)
+                            if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+                                content.style.maxHeight = '0px'; // Collapse
+                                console.log("Collapsing content.");
+                            } else {
+                                // Expand: Set maxHeight to its scrollHeight
+                                // Add a small buffer for potential padding/border changes if needed
+                                content.style.maxHeight = (content.scrollHeight + 10) + "px"; // Added buffer
+                                console.log("Expanding content to " + (content.scrollHeight + 10) + "px.");
+                            }
+                        } else {
+                            console.error("Error: Could not find the '.content' div immediately after the button.", button);
+                        }
+                    });
+                     button.dataset.listenerAttached = 'true'; // Mark listener as attached
+                });
+            } else {
+                console.warn("Warning: No elements with the class 'company' were found.");
+            }
+        }
+
+        // --- Load External Components & THEN Setup Accordions ---
+        async function runPageSetup() {
+             // Ensure runIncludes function from includes.js is async and defined
+             if (typeof runIncludes === 'function') {
+                try {
+                    await runIncludes(); // Wait for header/nav/footer to load
+                    console.log("Includes finished loading, setting up accordions...");
+                    setupAccordions(); // Now setup the accordions present on *this* page
+                } catch (error) {
+                    console.error("Error running includes:", error);
+                    // Still attempt to setup accordions in case includes failed partially
+                    setupAccordions();
+                }
+             } else {
+                 console.error("runIncludes function not found. Cannot wait for includes. Setting up accordions immediately.");
+                 // Fallback: Setup accordions immediately if includes script failed/changed
+                 setupAccordions();
+             }
+        }
+
+        runPageSetup();
+
+    });
+    </script>
+
+</body>
+</html>
+
+=== src/input.css ===
+/* professional/src/input.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* You can add custom CSS below these directives if needed */
+
+=== tailwind.config.js ===
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./**/*.html",
+    "./js/**/*.js"
+  ],
+  theme: {
+    extend: {
+      colors: {
+        darkblue: '#003A66',
+        midblue: '#4C7593',
+        navyblue: '#00233D',
+        yellow: '#FFD35C',
+        coral: '#FF875C',
+        darkgrey: '#525053',
+        lightgrey: '#CDCBCD',
+        backgroundgrey: '#f1f1f1',
+        brown: '#6F4930',
+        camp_blue: '#007185',
+        dark_blue: '#003A66', 
+        sunlight_yellow: '#FFD35C',
+        goldenrod: '#DAA520',
+        sky_white: '#F5F5F5',
+        forest_green: '#258F76',
+        slate_gray: '#6B7B8C',
+        text_grey: '#212121',
+      },
+      fontFamily: {
+        'sans': ['Open Sans', 'sans-serif'],
+        'montserrat': ['Montserrat', 'sans-serif'],
+      },
+    },
+  },
+  plugins: [],
+}
+

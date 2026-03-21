@@ -1,10 +1,17 @@
+# professional/docker-compose.yml
 version: '3.8'
-
 services:
-  web:
-    build: .
+  web-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: professional-dev-server
     ports:
-      - "8080:80"
+      - "8080:8080" # BrowserSync server
+      - "3001:3001" # BrowserSync UI (optional)
     volumes:
-      - .:/var/www/html
-    container_name: simple_php_site
+      - .:/app             # Sync local code changes into container
+      - /app/node_modules # Prevent node_modules overwriting
+      - /app/dist         # Allow container to write compiled CSS
+    stdin_open: true
+    tty: true
